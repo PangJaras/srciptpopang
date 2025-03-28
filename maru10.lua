@@ -1,9 +1,3 @@
-task.spawn(function()
-    wait(60)
-    if not game.CoreGui:FindFirstChild('NINONOOB') then
-        game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId)
-    end
-end)
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game.Players
 repeat task.wait() until game.Players.LocalPlayer
