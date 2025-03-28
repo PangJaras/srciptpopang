@@ -14,7 +14,7 @@ _G.Configs = {
 			["Enabled"] = true, -- < Boolean > Using Cpu less 20
 			["FpsCap"] = {
 				["On BlackScreen"] = 15, -- < Number > Fps Lock
-				["Un BlackScreen"] = 90 -- < Number > Fps Lock
+				["Un BlackScreen"] = 15 -- < Number > Fps Lock
 			}
 		},
 		["Position Farming"] = {
