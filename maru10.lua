@@ -1,3 +1,9 @@
+task.spawn(function()
+    wait(60)
+    if not game.CoreGui:FindFirstChild('NINONOOB') then
+        game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId)
+    end
+end)
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game.Players
 repeat task.wait() until game.Players.LocalPlayer
@@ -19,9 +25,9 @@ _G.MainSettings = {
             [2] = "Dragon-Dragon",
             [3] = "Leopard-Leopard",
             [4] = "Kitsune-Kitsune",
-            [5] = "T-Rex-T-Rex"
-            [6] = "Gas-Gas"
-            [7] = "Yeti-Yeti"
+            [5] = "T-Rex-T-Rex",
+            [6] = "Gas-Gas",
+            [7] = "Yeti-Yeti",
             [8] = "Mammoth-Mammoth"
         }
     }
