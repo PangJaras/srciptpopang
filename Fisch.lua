@@ -154,7 +154,7 @@ _G.Configs = {
 		},
 	},
 	["Roblox Account Manager"] = {
-		["Enabled"] = false, -- < Boolean > Enabled For Set Ailas, Description
+		["Enabled"] = true, -- < Boolean > Enabled For Set Ailas, Description
 		["Black List Rods"] = {"Flimsy Rod", "Carbon Rod", "Destiny Rod", "Trident Rod", "Volcanic Rod", "Challenger's Rod", "Kings Rod", "Midas Rod", "Mythical Rod"}
 	},
 }
