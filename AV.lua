@@ -5,7 +5,7 @@ getgenv().Configuration = {
     EquipBest = true,
     AutoClaims = {
         ['Achievement'] = true,
-        ['Milestones'] = true, -- // รับเควสเลเวล
+        ['Milestones'] = false, -- // รับเควสเลเวล
         ['Battlepas'] = true,
         ['Quests'] = true,
     },
