@@ -1,7 +1,7 @@
 getgenv().Configuration = {
-    Enabled = true,
-    RedeemCode = true,
-    SummonLegendary = true,
+    Enabled = false,
+    RedeemCode = false,
+    SummonLegendary = false,
     EquipBest = true,
     AutoClaims = {
         ['Achievement'] = true,
