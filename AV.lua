@@ -10,5 +10,5 @@ getgenv().Configuration = {
         ['Quests'] = true,
     },
 };
-getgenv().key = 'd59b3694-111e-4ed8-9046-e661c9910158'
+getgenv().key = {89956,76677,64607,15549,76535,154564}
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Xenon-Trash/Loader/main/Loader.lua'))()
