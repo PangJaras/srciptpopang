@@ -8,7 +8,7 @@ _G.MainSettings = {
         ["EnabledHOP"] = true, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
         ["UseGun"] = true,
         ['FPSBOOST'] = true, -- ภาพกาก
-        ["FPSLOCKAMOUNT"] = 12, -- จำนวน FPS
+        ["FPSLOCKAMOUNT"] = 15, -- จำนวน FPS
         ['WhiteScreen'] = false, -- จอขาว
         ['CloseUI'] = true, -- ปิด Ui
         ["NotifycationExPRemove"] = true, -- ลบ ExP ที่เด้งตอนฆ่ามอน
@@ -96,7 +96,7 @@ _G.SwordSettings = { -- ดาบที่จะทำ
 }
 _G.SharkAnchor_Settings = {
     ["Enabled_Farm"] = true,
-    ['FarmAfterMoney'] = 40000000
+    ['FarmAfterMoney'] = 25000000
 }
 _G.GunSettings = { -- ปืนที่จะทำ
     ['Kabucha'] = true,
