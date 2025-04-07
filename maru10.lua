@@ -70,10 +70,10 @@ _G.FarmMastery_Settings = {
         ["ManualSettings"] = { -- ถ้าปรับ AutoSettings เป็น false มันจะฟาร์มดาบที่เลือกตรงนี้ ตัวอย่างข้างล่าง
             "Saber",
             "Tushita",
-            "Yama",            
+            "Yama",
             "Cursed Dual Katana",
             "Hallow Scythe",
-            "Shark Anchor",            
+            "Shark Anchor",
             "Pole"
         }
     }
