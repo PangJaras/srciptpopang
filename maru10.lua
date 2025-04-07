@@ -8,26 +8,20 @@ _G.MainSettings = {
         ["EnabledHOP"] = true, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
         ["UseGun"] = true,
         ['FPSBOOST'] = true, -- ภาพกาก
-        ["FPSLOCKAMOUNT"] = 15, -- จำนวน FPS
-        ['WhiteScreen'] = false, -- จอขาว
+        ["FPSLOCKAMOUNT"] = 60, -- จำนวน FPS
+        ['WhiteScreen'] = true, -- จอขาว
         ['CloseUI'] = true, -- ปิด Ui
         ["NotifycationExPRemove"] = true, -- ลบ ExP ที่เด้งตอนฆ่ามอน
         ['AFKCheck'] = 150, -- ถ้ายืนนิ่งเกินวิที่ตั้งมันจะรีเกม
         ["LockFragments"] = 20000, -- ล็อคเงินม่วง
         ["LockFruitsRaid"] = { -- ล็อคผลที่ไม่เอาไปลงดัน
             [1] = "Dough-Dough",
-            [2] = "Dragon-Dragon",
-            [3] = "Leopard-Leopard",
-            [4] = "Kitsune-Kitsune",
-            [5] = "T-Rex-T-Rex",
-            [6] = "Gas-Gas",
-            [7] = "Yeti-Yeti",
-            [8] = "Mammoth-Mammoth"
+            [2] = "Dragon-Dragon"
         }
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
-    ['Main_Fruits'] = {'Kitsune-Kitsune', 'Dough-Dough'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
-    ['Select_Fruits'] = {"Flame-Flame", "Ice-Ice", "Light-Light", "Dark-Dark", "Rumble-Rumble", "Magma-Magma"} -- กินหรือซื้อตอนไม่มีผล
+    ['Main_Fruits'] = {'Dough-Dough'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
+    ['Select_Fruits'] = {"Flame-Flame", "Ice-Ice", "Quake-Quake", "Light-Light", "Dark-Dark", "Spider-Spider", "Rumble-Rumble", "Magma-Magma", "Buddha-Buddha"} -- กินหรือซื้อตอนไม่มีผล
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
     ['Rainbow_Haki'] = true,
@@ -66,15 +60,10 @@ _G.FarmMastery_Settings = {
     ['Sword'] = true,
     ['DevilFruits'] = true,
     ['Select_Swords'] = {
-        ["AutoSettings"] = false, -- ถ้าเปิดอันนี้มันจะเลือกดาบให้เองหรือฟาร์มทุกดาบนั่นเอง        
+        ["AutoSettings"] = false, -- ถ้าเปิดอันนี้มันจะเลือกดาบให้เองหรือฟาร์มทุกดาบนั่นเอง
         ["ManualSettings"] = { -- ถ้าปรับ AutoSettings เป็น false มันจะฟาร์มดาบที่เลือกตรงนี้ ตัวอย่างข้างล่าง
             "Saber",
-            "Tushita",
-            "Yama",            
-            "Cursed Dual Katana",
-            "Hallow Scythe",
-            "Shark Anchor",            
-            "Pole"
+            "Buddy Sword"
         }
     }
 }
@@ -96,12 +85,15 @@ _G.SwordSettings = { -- ดาบที่จะทำ
 }
 _G.SharkAnchor_Settings = {
     ["Enabled_Farm"] = true,
-    ['FarmAfterMoney'] = 25000000
+    ['FarmAfterMoney'] = 2500000
 }
 _G.GunSettings = { -- ปืนที่จะทำ
     ['Kabucha'] = true,
     ['SerpentBow'] = true,
-    ['SoulGuitar'] = false
+    ['SoulGuitar'] = true
+}
+_G.Hop_Settings = {
+    ["Find Tushita"] = true
 }
 getgenv().Key = "MARU-UQU3P-B1V0-RQ1U-NPO3L-3JICP"
 getgenv().id = "760440516156063766"
