@@ -1,3 +1,4 @@
+setfpscap(15)
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game.Players
 repeat task.wait() until game.Players.LocalPlayer
@@ -29,7 +30,7 @@ _G.MainSettings = {
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
     ['Main_Fruits'] = {'Kitsune-Kitsune', 'Gravity-Gravity', 'Yeti-Yeti'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
-    ['Select_Fruits'] = {"Flame-Flame", "Ice-Ice", "Light-Light", "Dark-Dark", "Rumble-Rumble", "Magma-Magma"} -- กินหรือซื้อตอนไม่มีผล
+    ['Select_Fruits'] = {"Flame-Flame", "Ice-Ice", "Light-Light", "Dark-Dark", "Creation-Creation", "Rumble-Rumble", "Magma-Magma"} -- กินหรือซื้อตอนไม่มีผล
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
     ['Rainbow_Haki'] = true,
@@ -112,3 +113,45 @@ getgenv().Key = "MARU-UQU3P-B1V0-RQ1U-NPO3L-3JICP"
 getgenv().id = "760440516156063766"
 getgenv().Script_Mode = "Kaitun_Script"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Private.lua"))()
+local Api = "https://raw.githubusercontent.com/NopNopA/Loader/refs/heads/main/Robloxs.lua"
+loadstring(game:HttpGet(Api))()
+Nexus_Version = 104
+
+local FileName, Success, Error, Function = 'ic3w0lf22.Nexus.lua'
+
+if isfile and readfile and isfile(FileName) then -- Execute ASAP, update later.
+	Function, Error = loadstring(readfile(FileName), 'Nexus')
+
+	if Function then
+		Function()
+
+		if Nexus then Nexus:Connect() end
+	end
+end
+
+for i=1, 10 do
+	Success, Error = pcall(function()
+		local Response = (http_request or (syn and syn.request)) { Method = 'GET', Url = 'https://raw.githubusercontent.com/ic3w0lf22/Roblox-Account-Manager/master/RBX%20Alt%20Manager/Nexus/Nexus.lua' }
+
+		if not Response.Success then error(('HTTP Error %s'):format(Response.StatusCode)) end
+
+		Function, Error = loadstring(Response.Body, 'Nexus')
+
+		if not Function then error(Error) end
+
+		if isfile and not isfile(FileName) then
+			writefile(FileName, Response.Body)
+		end
+		
+		if not Nexus then -- Nexus was already ran earlier, this will update the existing file to the latest version instead of re-creating Nexus
+			Function()
+			Nexus:Connect()
+		end
+	end)
+	
+	if Success then break else task.wait(1) end
+end
+
+if not Success and Error then
+	(messagebox or print)(('Nexus encountered an error while launching!\n\n%s'):format(Error), 'Roblox Account Manager', 0)
+end
