@@ -191,3 +191,5 @@ _G.Configs = {
 		["BlackList Rods"] = {"Flimsy Rod", "Carbon Rod", "Destiny Rod", "Trident Rod", "Volcanic Rod", "Challenger's Rod", "Kings Rod", "Midas Rod", "Mythical Rod"} -- < Table > BlackList Rods Notshow Description
 	},
 }
+getgenv().key = {92174,64887,40076,39699,65642,132251}
+loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/965cbb37d5a810609ee8cf51fba2ebea.lua'))()
