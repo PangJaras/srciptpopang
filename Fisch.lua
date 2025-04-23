@@ -87,12 +87,12 @@ _G.Configs = {
 		["Allow Buying"] = {
 			["Aurora Rod"] = true, -- < Boolean > Enabled For Buying
 			["Midas Rod"] = true, -- < Boolean > Enabled For Buying
-			["Destiny Rod"] = true, -- < Boolean > Enabled For Buying
+			["Destiny Rod"] = false, -- < Boolean > Enabled For Buying
 			["Poseidon Rod"] = true, -- < Boolean > Enabled For Buying
-			["Kraken Rod"] = true, -- < Boolean > Enabled For Buying
-			["Volcanic Rod"] = true, -- < Boolean > Enabled For Buying
-			["Challenger's Rod"] = true, -- < Boolean > Enabled For Buying
-			["Rod Of The Zenith"] = true, -- < Boolean > Enabled For Buying
+			["Kraken Rod"] = false, -- < Boolean > Enabled For Buying
+			["Volcanic Rod"] = false, -- < Boolean > Enabled For Buying
+			["Challenger's Rod"] = false, -- < Boolean > Enabled For Buying
+			["Rod Of The Zenith"] = false, -- < Boolean > Enabled For Buying
 			['Ethereal Prism Rod'] = true, -- < Boolean > Enabled For Buying
 		},
 		["Buy Effect Luck"] = {
@@ -149,7 +149,7 @@ _G.Configs = {
 		}
 	}, 
 	["Second Sea"] = {
-		["Enabled"] = true, -- < Boolean > Enabled For Go Second  Sea
+		["Enabled"] = true, -- < Boolean > Enabled For Go Second Sea
 		["Level Doing"] = 1000, -- < Number > Level For Doing Quest Secnod Sea
 		["Level Teleport Second Sea"] = 1000, -- < Number > Level For Go Second Sea
 		["Keepback"] = {
@@ -188,50 +188,8 @@ _G.Configs = {
 	},
 	["Roblox Account Manager"] = {
 		["Enabled"] = true, -- < Boolean > Enabled For Set Ailas, Description
-		["BlackList Rods"] = {"Flimsy Rod", "Carbon Rod", "Destiny Rod", "Trident Rod", "Volcanic Rod", "Challenger's Rod", "Kings Rod", "Midas Rod", "Mythical Rod"} -- < Table > BlackList Rods Notshow Description
+		["BlackList Rods"] = {""} -- < Table > BlackList Rods Notshow Description
 	},
 }
 getgenv().key = {92174,64887,40076,39699,65642,132251}
 loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/965cbb37d5a810609ee8cf51fba2ebea.lua'))()
-local Api = "https://raw.githubusercontent.com/NopNopA/Loader/refs/heads/main/Robloxs.lua"
-loadstring(game:HttpGet(Api))()
-Nexus_Version = 104
-
-local FileName, Success, Error, Function = 'ic3w0lf22.Nexus.lua'
-
-if isfile and readfile and isfile(FileName) then -- Execute ASAP, update later.
-	Function, Error = loadstring(readfile(FileName), 'Nexus')
-
-	if Function then
-		Function()
-
-		if Nexus then Nexus:Connect() end
-	end
-end
-
-for i=1, 10 do
-	Success, Error = pcall(function()
-		local Response = (http_request or (syn and syn.request)) { Method = 'GET', Url = 'https://raw.githubusercontent.com/ic3w0lf22/Roblox-Account-Manager/master/RBX%20Alt%20Manager/Nexus/Nexus.lua' }
-
-		if not Response.Success then error(('HTTP Error %s'):format(Response.StatusCode)) end
-
-		Function, Error = loadstring(Response.Body, 'Nexus')
-
-		if not Function then error(Error) end
-
-		if isfile and not isfile(FileName) then
-			writefile(FileName, Response.Body)
-		end
-		
-		if not Nexus then -- Nexus was already ran earlier, this will update the existing file to the latest version instead of re-creating Nexus
-			Function()
-			Nexus:Connect()
-		end
-	end)
-	
-	if Success then break else task.wait(1) end
-end
-
-if not Success and Error then
-	(messagebox or print)(('Nexus encountered an error while launching!\n\n%s'):format(Error), 'Roblox Account Manager', 0)
-end
