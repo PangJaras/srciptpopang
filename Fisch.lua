@@ -169,7 +169,7 @@ _G.Configs = {
 	},
 	["After Max Level"] = {
 		["Enabled"] = true, -- < Boolean > Enabled After Max Level Function
-		["Live In Sea"] = 1, -- < Number > Index Sea After Max Level
+		["Live In Sea"] = 2, -- < Number > Index Sea After Max Level
 		["Min Money For Start After Max Level"] = 30000000, -- < Number > Min Money For Start After Max Level Function
 		["Fishing Zone"] = { -- < Table > Fishing Zone Select ( Special Zone )
 			"Megalodon",
