@@ -44,7 +44,7 @@ _G.Configs = {
 		},
 		["Serverping"] = {
 			["Enabled"] = true, -- < Boolean > MaxPing Rejoin Server
-			["MaxPing"] = 500 -- < Number > MaxPing For Rejoin Server
+			["MaxPing"] = 1000 -- < Number > MaxPing For Rejoin Server
 		},
 		["Aurora Borealis"] = {
 			["Auto Using"] = true, -- < Boolean > Auto Using Aurora Totem
