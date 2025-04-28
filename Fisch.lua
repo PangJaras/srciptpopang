@@ -14,7 +14,7 @@ _G.Configs = {
 			["Enabled"] = true, -- < Boolean > Using Cpu less 20
 			["FpsCap"] = {
 				["On BlackScreen"] = 15, -- < Number > Fps Lock
-				["Un BlackScreen"] = 15 -- < Number > Fps Lock
+				["Un BlackScreen"] = 90 -- < Number > Fps Lock
 			}
 		},
 		["Position Farming"] = {
@@ -35,7 +35,7 @@ _G.Configs = {
 				},
 			},
 			["Logic Position"] = {
-				["Enabled"] = true,
+				["Enabled"] = false,
 				["Logic Work Status"] = {"Level", "Max Level"}, -- < Table > Level, Max Level, Main : Choose For This Logic Working
 				["Day Time"] = CFrame.new(), -- < CFrame > Custom CFrame In Day Time
 				["Night Time"] = CFrame.new(), -- < CFrame > Custom CFrame In Night Time
@@ -53,9 +53,9 @@ _G.Configs = {
 			["Min Money"] = 20000000 -- < Number > Min Money Buy Aurora / Sundial
 		},
 		["Farm Level"] = {
-			["Allow Farm Level"] = true,  -- < Boolean > Enabled Mode Farm Level
+			["Allow Farm Level"] = false,  -- < Boolean > Enabled Mode Farm Level
 			["Trier Rods [For Level]"] = {"Tempest Rod", "Ethereal Prism Rod"}, -- < Table > Table Equip Rod For Farm Level
-			["Min Money"] = 0 -- < Number > Min Money To Farm Level
+			["Min Money"] = 1000000 -- < Number > Min Money To Farm Level
 		},
 		["Sell Setting"] = {
 			["Sell Event Fish"] = true, -- < Boolean > Enabled Selling Event Fish
