@@ -44,7 +44,7 @@ _G.Configs = {
 		},
 		["Serverping"] = {
 			["Enabled"] = true, -- < Boolean > MaxPing Rejoin Server
-			["MaxPing"] = 100000 -- < Number > MaxPing For Rejoin Server
+			["MaxPing"] = 450 -- < Number > MaxPing For Rejoin Server
 		},
 		["Aurora Borealis"] = {
 			["Auto Using"] = true, -- < Boolean > Auto Using Aurora Totem
@@ -53,7 +53,7 @@ _G.Configs = {
 			["Min Money"] = 20000000 -- < Number > Min Money Buy Aurora / Sundial
 		},
 		["Farm Level"] = {
-			["Allow Farm Level"] = false,  -- < Boolean > Enabled Mode Farm Level
+			["Allow Farm Level"] = true,  -- < Boolean > Enabled Mode Farm Level
 			["Trier Rods [For Level]"] = {"Tempest Rod", "Ethereal Prism Rod"}, -- < Table > Table Equip Rod For Farm Level
 			["Min Money"] = 1000000 -- < Number > Min Money To Farm Level
 		},
