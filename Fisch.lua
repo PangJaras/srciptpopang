@@ -35,7 +35,7 @@ _G.Configs = {
 				},
 			},
 			["Logic Position"] = {
-				["Enabled"] = false,
+				["Enabled"] = true,
 				["Logic Work Status"] = {"Level", "Max Level"}, -- < Table > Level, Max Level, Main : Choose For This Logic Working
 				["Day Time"] = CFrame.new(), -- < CFrame > Custom CFrame In Day Time
 				["Night Time"] = CFrame.new(), -- < CFrame > Custom CFrame In Night Time
@@ -44,7 +44,7 @@ _G.Configs = {
 		},
 		["Serverping"] = {
 			["Enabled"] = true, -- < Boolean > MaxPing Rejoin Server
-			["MaxPing"] = 450 -- < Number > MaxPing For Rejoin Server
+			["MaxPing"] = 100000 -- < Number > MaxPing For Rejoin Server
 		},
 		["Aurora Borealis"] = {
 			["Auto Using"] = true, -- < Boolean > Auto Using Aurora Totem
@@ -55,7 +55,7 @@ _G.Configs = {
 		["Farm Level"] = {
 			["Allow Farm Level"] = true,  -- < Boolean > Enabled Mode Farm Level
 			["Trier Rods [For Level]"] = {"Tempest Rod", "Ethereal Prism Rod"}, -- < Table > Table Equip Rod For Farm Level
-			["Min Money"] = 1000000 -- < Number > Min Money To Farm Level
+			["Min Money"] = 0 -- < Number > Min Money To Farm Level
 		},
 		["Sell Setting"] = {
 			["Sell Event Fish"] = true, -- < Boolean > Enabled Selling Event Fish
@@ -169,7 +169,7 @@ _G.Configs = {
 	},
 	["After Max Level"] = {
 		["Enabled"] = true, -- < Boolean > Enabled After Max Level Function
-		["Live In Sea"] = 2, -- < Number > Index Sea After Max Level
+		["Live In Sea"] = 1, -- < Number > Index Sea After Max Level
 		["Min Money For Start After Max Level"] = 30000000, -- < Number > Min Money For Start After Max Level Function
 		["Fishing Zone"] = { -- < Table > Fishing Zone Select ( Special Zone )
 			"Megalodon",
