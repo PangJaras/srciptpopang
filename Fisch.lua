@@ -3,8 +3,8 @@ _G.Configs = {
 	Version = "20",
 	["Kai Aurora"] = false, -- < Boolean > Not Recommended Enabled For Kai Aurora Only
 	["Lock Plan"] = {
-		["Enabled"] = false, -- < Boolean > Enabled Lock Level 
-		["Lock Level"] = 500,  -- < Number > Lock Level 
+		["Enabled"] = true, -- < Boolean > Enabled Lock Level 
+		["Lock Level"] = 2500,  -- < Number > Lock Level 
 	},
 	Setting = {
 		["Perfect Catch"] = 100, -- < String > Style Perfect Catch [ Percent ]
