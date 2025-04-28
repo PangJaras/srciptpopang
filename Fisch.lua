@@ -44,7 +44,7 @@ _G.Configs = {
 		},
 		["Serverping"] = {
 			["Enabled"] = true, -- < Boolean > MaxPing Rejoin Server
-			["MaxPing"] = 1000 -- < Number > MaxPing For Rejoin Server
+			["MaxPing"] = 100000 -- < Number > MaxPing For Rejoin Server
 		},
 		["Aurora Borealis"] = {
 			["Auto Using"] = true, -- < Boolean > Auto Using Aurora Totem
@@ -142,7 +142,7 @@ _G.Configs = {
 			["Level Doing"] = 1000, -- < Number > Level For Starting Doing Forgotten Fang ( Level > 750 Only )
 		},
 		["Rod of The Eternal King"] = {
-			["Allow Doing"] = true, -- < Boolean > Enabled Do Eternal King Rod ( Req Lv 650 )
+			["Allow Doing"] = false, -- < Boolean > Enabled Do Eternal King Rod ( Req Lv 650 )
 			["Min Money Doing"] = 3000000, -- < Number > Min Money For Do Eternal King Rod
 			["Rod In Clam"] = "Ethereal Prism Rod", -- < String > Name Rod For Use In Clam ( Change 1/650 Recommend Luckily )
 			["Level Doing"] = 1000, -- < Number > Level For Starting Doing Eternal King ( Level > 650 Only )
