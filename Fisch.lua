@@ -14,7 +14,7 @@ _G.Configs = {
 			["Enabled"] = true, -- < Boolean > Using Cpu less 20
 			["FpsCap"] = {
 				["On BlackScreen"] = 15, -- < Number > Fps Lock
-				["Un BlackScreen"] = 15 -- < Number > Fps Lock
+				["Un BlackScreen"] = 90 -- < Number > Fps Lock
 			}
 		},
 		["Position Farming"] = {
@@ -53,7 +53,7 @@ _G.Configs = {
 			["Min Money"] = 20000000 -- < Number > Min Money Buy Aurora / Sundial
 		},
 		["Farm Level"] = {
-			["Allow Farm Level"] = false,  -- < Boolean > Enabled Mode Farm Level
+			["Allow Farm Level"] = true,  -- < Boolean > Enabled Mode Farm Level
 			["Trier Rods [For Level]"] = {"Tempest Rod", "Ethereal Prism Rod"}, -- < Table > Table Equip Rod For Farm Level
 			["Min Money"] = 1000000 -- < Number > Min Money To Farm Level
 		},
@@ -76,7 +76,7 @@ _G.Configs = {
 	},
 	["Custom Equip"] = {
 		["Trier Rods Equip"] = {"Rapid Rod", "Trident Rod", "Aurora Rod", "Rod Of The Depths", "Kraken Rod", "Poseidon Rod", "No-Life Rod", "Ethereal Prism Rod"}, -- < Table > Table Equip Rod
-		["Trier Rods Equip [ Second Sea ]"]	 = {"No-Life Rod"}
+		["Trier Rods Equip [ Second Sea ]"]	 = {"Ethereal Prism Rod", "Verdant Shear Rod", "Blazebringer Rod", "Azure Of Lagoon", "Great Dreamer Rod"}
 	},
 	["Custom Buying"] = {
 		["Buying Rods"] = {
@@ -159,7 +159,7 @@ _G.Configs = {
 		},
 		["Enchant Second Sea"] = {
 			["Enabled"] = true,
-			["Ready Have Rod"] = {"Verdant Shear Rod", "Blazebringer Rod", "Wildflower Rod", "Firefly Rod", "Frog Rod", "Azure Of Lagoon", "No-Life Rod", "Great Dreamer Rod"},
+			["Ready Have Rod"] = {"Verdant Shear Rod", "Blazebringer Rod", "Wildflower Rod", "Firefly Rod", "Frog Rod", "Azure Of Lagoon", "Free Spirit Rod", "Great Dreamer Rod"},
 			["Lock Enchant"] = { -- < Table > Lock Enchant ["Rod Name"] = {"Name Enchant","Muti Enchant"}		
 				["Verdant Shear Rod"] = {"Hasty"},
 				["Blazebringer Rod"] = {"Hasty"},
