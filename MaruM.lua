@@ -30,7 +30,7 @@ _G.MainSettings = {
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
     ['Main_Fruits'] = {'Kitsune-Kitsune'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
-    ['Select_Fruits'] = {"Flame-Flame", "Ice-Ice", "Light-Light", "Dark-Dark", "Rumble-Rumble", "Magma-Magma"} -- กินหรือซื้อตอนไม่มีผล
+    ['Select_Fruits'] = {"Ice-Ice", "Light-Light", "Dark-Dark", "Rumble-Rumble", "Magma-Magma"} -- กินหรือซื้อตอนไม่มีผล
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
     ['Rainbow_Haki'] = true,
@@ -113,6 +113,10 @@ getgenv().Key = "MARU-UQU3P-B1V0-RQ1U-NPO3L-3JICP"
 getgenv().id = "760440516156063766"
 getgenv().Script_Mode = "Kaitun_Script"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Private.lua"))()
+_G.Configs = {
+    server_port = 2124,
+}
+
 task.spawn(function()
     x, p = pcall(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/Nexus/refs/heads/main/Api-Loader-Masterp.lua"))()
