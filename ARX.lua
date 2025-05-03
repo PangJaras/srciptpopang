@@ -21,7 +21,7 @@ getgenv().Configuration = {
     ['Equip Best Units'] = true, -- true / false
 
     ['Lobby Matchmaking Delay'] = 30, -- 30 seconds
-    ['Lobby Matchmaking'] = true, -- true / false
+    ['Lobby Matchmaking'] = false, -- true / false
 
     ['Auto Vote Playing'] = true, -- true / false
     ['Auto Vote Retry'] = true, -- true / false
