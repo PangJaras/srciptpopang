@@ -10,7 +10,7 @@ getgenv().Configuration = {
     ['Required Mythical Units'] = true, -- true / false
 
     ['Legendary Units'] = {'Okarun'},
-    ['Required Legendary Units'] = true, -- true / false
+    ['Required Legendary Units'] = false, -- true / false
 
     ['Webhook URL'] = '', -- Webhook Discord
     ['Webhook Enabled'] = false, -- true / false,
