@@ -24,7 +24,7 @@ getgenv().Configuration = {
     ['Lobby Matchmaking'] = false, -- true / false
 
     ['Auto Vote Playing'] = true, -- true / false
-    ['Auto Vote Retry'] = true, -- true / false
+    ['Auto Vote Retry'] = false, -- true / false
     ['Auto Vote Next'] = true, -- true / false
 
     ['Auto Sell Units'] = true, -- true / false
