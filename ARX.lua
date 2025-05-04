@@ -10,7 +10,7 @@ getgenv().Configuration = {
     ['Required Mythical Units'] = true, -- true / false
 
     ['Legendary Units'] = {'Okarun'},
-    ['Required Legendary Units'] = false, -- true / false
+    ['Required Legendary Units'] = true, -- true / false
 
     ['Webhook URL'] = '', -- Webhook Discord
     ['Webhook Enabled'] = false, -- true / false,
@@ -24,7 +24,7 @@ getgenv().Configuration = {
     ['Lobby Matchmaking'] = false, -- true / false
 
     ['Auto Vote Playing'] = true, -- true / false
-    ['Auto Vote Retry'] = false, -- true / false
+    ['Auto Vote Retry'] = true, -- true / false
     ['Auto Vote Next'] = true, -- true / false
 
     ['Auto Sell Units'] = true, -- true / false
