@@ -7,10 +7,10 @@ getgenv().Configuration = {
     ['Claim Quests'] = true, -- true / false
 
     ['Mythical Units'] = {'Katakuri', 'Broly', 'Gojo', 'Songjinwuu'},
-    ['Required Mythical Units'] = true, -- true / false
+    ['Required Mythical Units'] = false, -- true / false
 
     ['Legendary Units'] = {'Okarun'},
-    ['Required Legendary Units'] = true, -- true / false
+    ['Required Legendary Units'] = false, -- true / false
 
     ['Webhook URL'] = '', -- Webhook Discord
     ['Webhook Enabled'] = false, -- true / false,
@@ -29,7 +29,7 @@ getgenv().Configuration = {
 
     ['Auto Sell Units'] = false, -- true / false
 
-    ['Auto Sell Units Rarity'] = {'Rare', 'Epic'}
+    ['Auto Sell Units Rarity'] = {}
 }
 getgenv().key = {89956,76677,64607,15549,76535,154564}
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Xenon-Trash/Loader/main/Loader.lua'))()
