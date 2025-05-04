@@ -27,7 +27,7 @@ getgenv().Configuration = {
     ['Auto Vote Retry'] = true, -- true / false
     ['Auto Vote Next'] = true, -- true / false
 
-    ['Auto Sell Units'] = true, -- true / false
+    ['Auto Sell Units'] = false, -- true / false
 
     ['Auto Sell Units Rarity'] = {'Rare', 'Epic'}
 }
