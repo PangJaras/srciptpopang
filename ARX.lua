@@ -7,7 +7,7 @@ getgenv().Configuration = {
     ['Claim Quests'] = true, -- true / false
 
     ['Mythical Units'] = {'Saber', 'Tatsumaki'},
-    ['Required Mythical Units'] = true, -- true / false
+    ['Required Mythical Units'] = false, -- true / false
 
     ['Legendary Units'] = {'Okarun'},
     ['Required Legendary Units'] = false, -- true / false
