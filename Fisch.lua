@@ -3,8 +3,8 @@ _G.Configs = {
 	Version = "20",
 	["Kai Aurora"] = false, -- < Boolean > Not Recommended Enabled For Kai Aurora Only
 	["Lock Plan"] = {
-		["Enabled"] = true, -- < Boolean > Enabled Lock Level 
-		["Lock Level"] = 2500,  -- < Number > Lock Level 
+		["Enabled"] = false, -- < Boolean > Enabled Lock Level 
+		["Lock Level"] = 500,  -- < Number > Lock Level 
 	},
 	Setting = {
 		["Perfect Catch"] = 100, -- < String > Style Perfect Catch [ Percent ]
@@ -53,7 +53,7 @@ _G.Configs = {
 			["Min Money"] = 20000000 -- < Number > Min Money Buy Aurora / Sundial
 		},
 		["Farm Level"] = {
-			["Allow Farm Level"] = true,  -- < Boolean > Enabled Mode Farm Level
+			["Allow Farm Level"] = false,  -- < Boolean > Enabled Mode Farm Level
 			["Trier Rods [For Level]"] = {"Tempest Rod", "Ethereal Prism Rod"}, -- < Table > Table Equip Rod For Farm Level
 			["Min Money"] = 1000000 -- < Number > Min Money To Farm Level
 		},
@@ -193,45 +193,3 @@ _G.Configs = {
 }
 getgenv().key = {92174,64887,40076,39699,65642,132251}
 loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/965cbb37d5a810609ee8cf51fba2ebea.lua'))()
-local Api = "https://raw.githubusercontent.com/NopNopA/Loader/refs/heads/main/Robloxs.lua"
-loadstring(game:HttpGet(Api))()
-Nexus_Version = 104
-
-local FileName, Success, Error, Function = 'ic3w0lf22.Nexus.lua'
-
-if isfile and readfile and isfile(FileName) then -- Execute ASAP, update later.
-	Function, Error = loadstring(readfile(FileName), 'Nexus')
-
-	if Function then
-		Function()
-
-		if Nexus then Nexus:Connect() end
-	end
-end
-
-for i=1, 10 do
-	Success, Error = pcall(function()
-		local Response = (http_request or (syn and syn.request)) { Method = 'GET', Url = 'https://raw.githubusercontent.com/ic3w0lf22/Roblox-Account-Manager/master/RBX%20Alt%20Manager/Nexus/Nexus.lua' }
-
-		if not Response.Success then error(('HTTP Error %s'):format(Response.StatusCode)) end
-
-		Function, Error = loadstring(Response.Body, 'Nexus')
-
-		if not Function then error(Error) end
-
-		if isfile and not isfile(FileName) then
-			writefile(FileName, Response.Body)
-		end
-		
-		if not Nexus then -- Nexus was already ran earlier, this will update the existing file to the latest version instead of re-creating Nexus
-			Function()
-			Nexus:Connect()
-		end
-	end)
-	
-	if Success then break else task.wait(1) end
-end
-
-if not Success and Error then
-	(messagebox or print)(('Nexus encountered an error while launching!\n\n%s'):format(Error), 'Roblox Account Manager', 0)
-end
