@@ -7,7 +7,6 @@ _G.Team = "Pirate" -- Marine / Pirate
 getgenv().Script_Mode = "Kaitun_Script"
 _G.MainSettings = {
         ["EnabledHOP"] = true, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
-        ["UseGun"] = true,
         ['FPSBOOST'] = true, -- ภาพกาก
         ["FPSLOCKAMOUNT"] = 15, -- จำนวน FPS
         ['WhiteScreen'] = false, -- จอขาว
@@ -113,6 +112,7 @@ getgenv().Key = "MARU-UQU3P-B1V0-RQ1U-NPO3L-3JICP"
 getgenv().id = "760440516156063766"
 getgenv().Script_Mode = "Kaitun_Script"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Private.lua"))()
+
 _G.Configs = {
     server_port = 2124,
 }
