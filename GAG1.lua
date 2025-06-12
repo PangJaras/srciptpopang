@@ -100,7 +100,7 @@ getgenv().ConfigsKaitun = {
 		"Raccoon",
 		"Red Fox",
 		"Blood Owl",
-    "Kiwi",
+    		"Kiwi",
 		"Blood Kiwi", -- ใส่เเบบนี้หมายความว่า เก็บหมดไม่มี limit
 	}
 }
