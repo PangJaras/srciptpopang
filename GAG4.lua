@@ -10,24 +10,15 @@ getgenv().ConfigsKaitun = {
 	["Seed"] = {
 		["Mode"] = "Custom", -- Custom , Auto
 		["Custom"] = { -- ถ้าปรับเป็น custom มันจะซื้อเเค่ที่ใส่ในด้านล่าง
-        	"Bamboo",
-        	"Carrot",
-        	"Watermelon",
-        	"Pumpkin",
-        	"Mushroom",
-        	"Beanstalk",
-        	"Cacao",
-        	"Pepper",
-        	"Grape",
-        	"Mango",
-        	"Dragon Fruit",
-        	"Coconut",
-        	"Rose",
-        	"Foxglove",
-        	"Lilac",
-        	"Ember Lily",
-        	"Pink Lily",
-        	"Purple Dahlia",
+			"Carrot",
+			"Bamboo",
+			"Pumpkin",
+			"Daffodil",
+			"Orange Tulip",
+			"Watermelon",
+			"Mushroom",
+			"Nightshade",
+			"Beanstalk",
 		}
 	},
 	
@@ -52,15 +43,14 @@ getgenv().ConfigsKaitun = {
 	["Eggs"] = {
 		["Hatch"] = { -- มันจะสุ่มไขซื้อไข่วางไข่ เรียงจากบนลงล่างก่อน
 			"Bee Egg",
-			"Night Egg",
-			"Premium Night Egg",
 			"Bug Egg",
+			"Premium Night Egg",
 			"Exotic Bug Egg",
 			"Mythical Egg",
 			"Uncommnon Egg"
 		},
 		["Safe Eggs"] = { -- จะไม่วางหรือฟักไข่ให้
-			"Idk",
+			"Night Egg",
 		}
 	},
 	
@@ -79,6 +69,8 @@ getgenv().ConfigsKaitun = {
 	},
 	["Lock Seeds"] = { -- มันจะไม่ใช้ seed pack ที่เลือก
 		"Sunflower",
+		"Ember Lily",
+		"Pepper",
 	},
 	["Noti Seed Packs"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
 		"Idk"
@@ -100,7 +92,6 @@ getgenv().ConfigsKaitun = {
 		"Raccoon",
 		"Red Fox",
 		"Blood Owl",
-    		"Kiwi",
 		"Blood Kiwi", -- ใส่เเบบนี้หมายความว่า เก็บหมดไม่มี limit
 	}
 }
