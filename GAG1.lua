@@ -22,6 +22,10 @@ getgenv().ConfigsKaitun = {
 		}
 	},
 	
+	["Craft Event"] = {
+		"Anti Bee Egg",
+	},
+	
 	["Event Shop"] =  { -- จะให้ซื้ออะไรบ้างจาก event shop อยากได้อันไหนเพิ่ม เอา -- ออก
 		"Flower Seed Pack",
 		--"Nectarine",
@@ -44,10 +48,11 @@ getgenv().ConfigsKaitun = {
 		["Hatch"] = { -- มันจะสุ่มไขซื้อไข่วางไข่ เรียงจากบนลงล่างก่อน
 			"Bee Egg",
 			"Bug Egg",
-			"Premium Night Egg",
+			"Anti Bee Egg",
+			"Bug Egg",
 			"Exotic Bug Egg",
 			"Mythical Egg",
-			"Uncommnon Egg"
+			"Uncommon Egg"
 		},
 		["Safe Eggs"] = { -- จะไม่วางหรือฟักไข่ให้
 			"Night Egg",
@@ -61,7 +66,8 @@ getgenv().ConfigsKaitun = {
 	},
 
 	["Webhook"] = {-- webhook เเจ้งเตือน ถ้าได้สัตว์ใน Noti Pets หรือพวกที่มี Noti อื่นๆ
-		Url = "Url Here",
+		UrlPet = "Url Here",
+		UrlSeed = "Url Here",
 		PcName = "Threadripper pro 7995wx"
 	},
 	["Noti Seeds"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
@@ -69,8 +75,6 @@ getgenv().ConfigsKaitun = {
 	},
 	["Lock Seeds"] = { -- มันจะไม่ใช้ seed pack ที่เลือก
 		"Sunflower",
-		"Ember Lily",
-		"Pepper",
 	},
 	["Noti Seed Packs"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
 		"Idk"
@@ -87,6 +91,8 @@ getgenv().ConfigsKaitun = {
 	},
 	["Lock Pets"] = { -- สัตว์ที่จะเก็บไว้ไม่ขายไม่เอาไปเเลก slot
 		"Queen Bee",
+		"Disco Bee",
+		"Butterfly",		
 		"Petal Bee",
 		"Dragonfly",
 		"Raccoon",
