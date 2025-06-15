@@ -23,7 +23,8 @@ getgenv().ConfigsKaitun = {
 	},
 	
 	["Craft Event"] = {
-		
+		"Crafters Seed Pack",
+		"Anti Bee Egg"
 	},
 	
 	["Event Shop"] =  { -- จะให้ซื้ออะไรบ้างจาก event shop อยากได้อันไหนเพิ่ม เอา -- ออก
@@ -47,8 +48,8 @@ getgenv().ConfigsKaitun = {
 	["Eggs"] = {
 		["Hatch"] = { -- มันจะสุ่มไขซื้อไข่วางไข่ เรียงจากบนลงล่างก่อน
 			"Bug Egg",
-			"Anti Bee Egg",
 			"Bee Egg",
+			"Anti Bee Egg",
 			"Exotic Bug Egg",
 			"Mythical Egg",
 			"Uncommon Egg"
