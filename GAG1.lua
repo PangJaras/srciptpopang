@@ -48,7 +48,7 @@ getgenv().ConfigsKaitun = {
 		["Hatch"] = { -- มันจะสุ่มไขซื้อไข่วางไข่ เรียงจากบนลงล่างก่อน
 			"Bug Egg",
 			"Anti Bee Egg",
-			"Bug Egg",
+			"Bee Egg",
 			"Exotic Bug Egg",
 			"Mythical Egg",
 			"Uncommon Egg"
