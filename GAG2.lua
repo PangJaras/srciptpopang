@@ -23,7 +23,8 @@ getgenv().ConfigsKaitun = {
 	},
 	
 	["Craft Event"] = {
-		"Anti Bee Egg",
+		"Crafters Seed Pack",
+		"Anti Bee Egg"
 	},
 	
 	["Event Shop"] =  { -- จะให้ซื้ออะไรบ้างจาก event shop อยากได้อันไหนเพิ่ม เอา -- ออก
@@ -46,16 +47,15 @@ getgenv().ConfigsKaitun = {
 
 	["Eggs"] = {
 		["Hatch"] = { -- มันจะสุ่มไขซื้อไข่วางไข่ เรียงจากบนลงล่างก่อน
+			"Bug Egg",
 			"Bee Egg",
-			"Bug Egg",
 			"Anti Bee Egg",
-			"Bug Egg",
 			"Exotic Bug Egg",
 			"Mythical Egg",
 			"Uncommon Egg"
 		},
 		["Safe Eggs"] = { -- จะไม่วางหรือฟักไข่ให้
-			"Night Egg",
+			"Bee Egg",
 		}
 	},
 	
@@ -75,12 +75,17 @@ getgenv().ConfigsKaitun = {
 	},
 	["Lock Seeds"] = { -- มันจะไม่ใช้ seed pack ที่เลือก
 		"Sunflower",
+		"Bendboo",
+		"Ember Lily",
+		"Sugar Apple",
+		"Dragon Pepper",
+		"Cocovine",
 	},
 	["Noti Seed Packs"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
 		"Idk"
 	},
 	["Lock Seed Packs"] = { -- มันจะไม่เปิด Seed pack นั้นๆให้
-		"Idk"
+		"Flower Seed Pack"
 	},
 	["Noti Pets"] = { -- สัตว์ที่จะให้มันเเจ้งเตือนใน webhook
 		"Queen Bee",
