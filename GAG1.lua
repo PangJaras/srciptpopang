@@ -23,8 +23,7 @@ getgenv().ConfigsKaitun = {
 	},
 	
 	["Craft Event"] = {
-		"Anti Bee Egg",
-		"Crafters Seed Pack",
+		
 	},
 	
 	["Event Shop"] =  { -- จะให้ซื้ออะไรบ้างจาก event shop อยากได้อันไหนเพิ่ม เอา -- ออก
