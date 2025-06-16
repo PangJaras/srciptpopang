@@ -42,7 +42,7 @@ getgenv().ConfigsKaitun = {
 		"Advanced Sprinkler"
 	},
 	["Gear Lock"] = {
-		"Master Sprinkler",
+		"Master Sprinkler"
 	},
 
 	["Eggs"] = {
@@ -79,7 +79,7 @@ getgenv().ConfigsKaitun = {
 		"Ember Lily",
 		"Sugar Apple",
 		"Dragon Pepper",
-		"Cocovine",
+		"Cocovine"
 	},
 	["Noti Seed Packs"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
 		"Idk"
