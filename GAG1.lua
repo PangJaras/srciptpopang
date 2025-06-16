@@ -42,7 +42,7 @@ getgenv().ConfigsKaitun = {
 		"Advanced Sprinkler"
 	},
 	["Gear Lock"] = {
-		"Master Sprinkler",
+		"Master Sprinkler"
 	},
 
 	["Eggs"] = {
@@ -79,7 +79,7 @@ getgenv().ConfigsKaitun = {
 		"Ember Lily",
 		"Sugar Apple",
 		"Dragon Pepper",
-		"Cocovine",
+		"Cocovine"
 	},
 	["Noti Seed Packs"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
 		"Idk"
@@ -106,5 +106,5 @@ getgenv().ConfigsKaitun = {
 		"Blood Kiwi", -- ใส่เเบบนี้หมายความว่า เก็บหมดไม่มี limit
 	}
 }
-License = "umTEBHmllI5M8SVYERRh5Nutv7RcYmWb"
+License = "pYTVIT8AzmavMxhYrfowQJ4ijfefnU37"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
