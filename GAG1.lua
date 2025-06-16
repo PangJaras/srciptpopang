@@ -106,5 +106,5 @@ getgenv().ConfigsKaitun = {
 		"Blood Kiwi", -- ใส่เเบบนี้หมายความว่า เก็บหมดไม่มี limit
 	}
 }
-License = "pYTVIT8AzmavMxhYrfowQJ4ijfefnU37"
+License = "umTEBHmllI5M8SVYERRh5Nutv7RcYmWb"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
