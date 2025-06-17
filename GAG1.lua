@@ -19,7 +19,6 @@ getgenv().ConfigsKaitun = {
 			"Watermelon",
 			"Mushroom",
 			"Pepper",
-			"Pepper",
 			"Nightshade",
 			"Beanstalk",
 		}
