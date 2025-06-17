@@ -11,12 +11,15 @@ getgenv().ConfigsKaitun = {
 		["Mode"] = "Custom", -- Custom , Auto
 		["Custom"] = { -- ถ้าปรับเป็น custom มันจะซื้อเเค่ที่ใส่ในด้านล่าง
 			"Carrot",
+			"Mango",
 			"Bamboo",
 			"Pumpkin",
 			"Daffodil",
 			"Orange Tulip",
 			"Watermelon",
 			"Mushroom",
+			"Pepper",
+			"Pepper",
 			"Nightshade",
 			"Beanstalk",
 		}
