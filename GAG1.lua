@@ -46,6 +46,7 @@ getgenv().ConfigsKaitun = {
 		"Advanced Sprinkler"
 	},
 	["Gear Lock"] = {
+		"Basic Sprinkler",
 		"Master Sprinkler",
 		"Lightning Rod",
 		"Godly Sprinkler",
