@@ -40,11 +40,16 @@ getgenv().ConfigsKaitun = {
 	
 	["Gear Shop"] = {
 		"Master Sprinkler",
+		"Lightning Rod",
+		"Basic Sprinkler",
 		"Godly Sprinkler",
 		"Advanced Sprinkler"
 	},
 	["Gear Lock"] = {
-		"Master Sprinkler"
+		"Master Sprinkler",
+		"Lightning Rod",
+		"Godly Sprinkler",
+		"Advanced Sprinkler"
 	},
 
 	["Eggs"] = {
@@ -63,7 +68,7 @@ getgenv().ConfigsKaitun = {
 	
 	["Limit Upgrade Slot"] = 5, -- เป็นการปลด ค่าสูงสุดของการวางไข่เเละใช้สัตว์ (สูงสุด 5)
 	["Equip When Done"] = { -- จะให้มันใส่สัตว์อะไรหลังจากปลดอันบนเสร็จเเล้ว
-		"Blood Kiwi",
+		"Chicken",
 		"Kiwi"
 	},
 
@@ -84,7 +89,7 @@ getgenv().ConfigsKaitun = {
 		"Cocovine"
 	},
 	["Noti Seed Packs"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
-		"Idk"
+		""
 	},
 	["Lock Seed Packs"] = { -- มันจะไม่เปิด Seed pack นั้นๆให้
 		"Flower Seed Pack"
