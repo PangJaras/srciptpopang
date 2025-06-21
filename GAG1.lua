@@ -40,6 +40,7 @@ getgenv().ConfigsKaitun = {
 	
 	["Gear Shop"] = {
 		"Master Sprinkler",
+		"Watering Can",
 		"Lightning Rod",
 		"Basic Sprinkler",
 		"Godly Sprinkler",
@@ -47,6 +48,7 @@ getgenv().ConfigsKaitun = {
 	},
 	["Gear Lock"] = {
 		"Master Sprinkler",
+		"Watering Can",
 		"Lightning Rod",
 		"Basic Sprinkler",
 		"Godly Sprinkler",
