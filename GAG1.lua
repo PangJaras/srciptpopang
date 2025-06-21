@@ -2,6 +2,8 @@ getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
 	["Low Cpu"] = false,
 	
+	["Summer Harvest Event"] = true,
+	
 	["Limit Tree"] = { -- จำกัดจำนวนต้นไม้
 		["Limit"] = 400, -- ถ้าต้นไม่ถึงที่ตั้งไว้
 		["Sell Untill"] = 350 -- มันจะขายจนเหลือที่ตั้งตรงนี้
@@ -10,17 +12,15 @@ getgenv().ConfigsKaitun = {
 	["Seed"] = {
 		["Mode"] = "Custom", -- Custom , Auto
 		["Custom"] = { -- ถ้าปรับเป็น custom มันจะซื้อเเค่ที่ใส่ในด้านล่าง
-			"Carrot",
-			"Mango",
-			"Bamboo",
-			"Pumpkin",
-			"Daffodil",
-			"Orange Tulip",
 			"Watermelon",
-			"Mushroom",
-			"Pepper",
-			"Nightshade",
-			"Beanstalk",
+			"Green Apple",
+			"Sugar Apple",
+			"Feijoa",
+			"Loquat",
+			"Bell Pepper",
+			"Kiwi",
+			"Pineapple",
+			"Banana",
 		}
 	},
 	
@@ -46,20 +46,22 @@ getgenv().ConfigsKaitun = {
 		"Advanced Sprinkler"
 	},
 	["Gear Lock"] = {
-		"Basic Sprinkler",
 		"Master Sprinkler",
 		"Lightning Rod",
+		"Basic Sprinkler",
 		"Godly Sprinkler",
 		"Advanced Sprinkler"
 	},
 
 	["Eggs"] = {
 		["Hatch"] = { -- มันจะสุ่มไขซื้อไข่วางไข่ เรียงจากบนลงล่างก่อน
-			"Bug Egg",
-			"Bee Egg",
 			"Anti Bee Egg",
-			"Exotic Bug Egg",
+			"Paradise Egg",
+			"Bee Egg",
+			"Night Egg",
+			"Bug Egg",
 			"Mythical Egg",
+            		"Rare Summer Egg",
 			"Uncommon Egg"
 		},
 		["Safe Eggs"] = { -- จะไม่วางหรือฟักไข่ให้
@@ -67,10 +69,10 @@ getgenv().ConfigsKaitun = {
 		}
 	},
 	
-	["Limit Upgrade Slot"] = 5, -- เป็นการปลด ค่าสูงสุดของการวางไข่เเละใช้สัตว์ (สูงสุด 5)
+	["Limit Upgrade Slot"] = 1, -- เป็นการปลด ค่าสูงสุดของการวางไข่เเละใช้สัตว์ (สูงสุด 5)
 	["Equip When Done"] = { -- จะให้มันใส่สัตว์อะไรหลังจากปลดอันบนเสร็จเเล้ว
-		"Chicken",
-		"Kiwi"
+		"Blood Kiwi",
+		"Chicken"
 	},
 
 	["Webhook"] = {-- webhook เเจ้งเตือน ถ้าได้สัตว์ใน Noti Pets หรือพวกที่มี Noti อื่นๆ
@@ -80,14 +82,16 @@ getgenv().ConfigsKaitun = {
 	},
 	["Noti Seeds"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
 		"Sunflower",
-	},
-	["Lock Seeds"] = { -- มันจะไม่ใช้ seed pack ที่เลือก
-		"Sunflower",
-		"Bendboo",
-		"Ember Lily",
-		"Sugar Apple",
 		"Dragon Pepper",
-		"Cocovine"
+		"Elephant Ears"
+	},
+	["Lock Seeds"] = { -- มันจะไม่ใช้ seed ที่เลือก
+		"Sunflower",
+		"Dragon Pepper",
+		"Elephant Ears",
+		"Rosy Delight",
+        	"Moon Melon",
+		"Parasol Flower"
 	},
 	["Noti Seed Packs"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
 		""
@@ -96,22 +100,37 @@ getgenv().ConfigsKaitun = {
 		"Flower Seed Pack"
 	},
 	["Noti Pets"] = { -- สัตว์ที่จะให้มันเเจ้งเตือนใน webhook
+		"Disco Bee",
+		"Butterfly",
+		"Mimic Octopus",
+		"Peacock",
+		"Scarlet Macaw",
+		"Moth",
+		"Brown Mouse",
 		"Queen Bee",
-		"Petal Bee",
 		"Dragonfly",
 		"Raccoon",
 		"Red Fox",
 	},
 	["Lock Pets"] = { -- สัตว์ที่จะเก็บไว้ไม่ขายไม่เอาไปเเลก slot
-		"Queen Bee",
 		"Disco Bee",
-		"Butterfly",		
-		"Petal Bee",
+		"Butterfly",
+		"Mimic Octopus",
+		"Peacock",
+		"Scarlet Macaw",
+		"Moth",
+		"Brown Mouse",
+		"Queen Bee",
 		"Dragonfly",
 		"Raccoon",
 		"Red Fox",
-		"Blood Owl",
+		"Moon Cat",
 		"Blood Kiwi", -- ใส่เเบบนี้หมายความว่า เก็บหมดไม่มี limit
+		["Capybara"] = 5,
+        	["Chicken"] = 5,
+        	["Turtle"] = 5,
+        	["Praying Mantis"] = 5,
+        	["Hedgehog"] = 5,
 	}
 }
 License = "umTEBHmllI5M8SVYERRh5Nutv7RcYmWb"
