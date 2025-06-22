@@ -12,6 +12,7 @@ getgenv().ConfigsKaitun = {
 	["Seed"] = {
 		["Mode"] = "Custom", -- Custom , Auto
 		["Custom"] = { -- ถ้าปรับเป็น custom มันจะซื้อเเค่ที่ใส่ในด้านล่าง
+			"Carrot",
 			"Watermelon",
 			"Green Apple",
 			"Sugar Apple",
