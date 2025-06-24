@@ -13,6 +13,7 @@ getgenv().ConfigsKaitun = {
 		["Mode"] = "Custom", -- Custom , Auto
 		["Custom"] = { -- ถ้าปรับเป็น custom มันจะซื้อเเค่ที่ใส่ในด้านล่าง
 			"Carrot",
+			"Tomato",
 			"Watermelon",
 			"Green Apple",
 			"Sugar Apple",
@@ -26,7 +27,7 @@ getgenv().ConfigsKaitun = {
 	},
 	
 	["Craft Event"] = {
-		"Crafters Seed Pack",
+		"Lightning Rod",
 		"Anti Bee Egg"
 	},
 	
@@ -42,7 +43,6 @@ getgenv().ConfigsKaitun = {
 	["Gear Shop"] = {
 		"Master Sprinkler",
 		"Watering Can",
-		"Lightning Rod",
 		"Basic Sprinkler",
 		"Godly Sprinkler",
 		"Advanced Sprinkler"
@@ -100,7 +100,7 @@ getgenv().ConfigsKaitun = {
 		""
 	},
 	["Lock Seed Packs"] = { -- มันจะไม่เปิด Seed pack นั้นๆให้
-		"Flower Seed Pack"
+		""
 	},
 	["Noti Pets"] = { -- สัตว์ที่จะให้มันเเจ้งเตือนใน webhook
 		"Disco Bee",
@@ -122,7 +122,6 @@ getgenv().ConfigsKaitun = {
 		"Peacock",
 		"Scarlet Macaw",
 		"Moth",
-		"Brown Mouse",
 		"Queen Bee",
 		"Dragonfly",
 		"Raccoon",
@@ -133,7 +132,6 @@ getgenv().ConfigsKaitun = {
         	["Chicken"] = 5,
         	["Turtle"] = 5,
         	["Praying Mantis"] = 5,
-        	["Hedgehog"] = 5,
 	}
 }
 License = "umTEBHmllI5M8SVYERRh5Nutv7RcYmWb"
