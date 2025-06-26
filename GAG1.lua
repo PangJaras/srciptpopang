@@ -90,6 +90,7 @@ getgenv().ConfigsKaitun = {
 	},
 	["Lock Seeds"] = { -- มันจะไม่ใช้ seed ที่เลือก
 		"Sunflower",
+		"Moon Blossom",
 		"Dragon Pepper",
 		"Elephant Ears",
 		"Rosy Delight",
