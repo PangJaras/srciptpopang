@@ -2,139 +2,178 @@ getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
 	["Low Cpu"] = false,
 	
-	["Summer Harvest Event"] = true,
-	
-	["Limit Tree"] = { -- จำกัดจำนวนต้นไม้
-		["Limit"] = 400, -- ถ้าต้นไม่ถึงที่ตั้งไว้
-		["Sell Untill"] = 350 -- มันจะขายจนเหลือที่ตั้งตรงนี้
+	["Limit Tree"] = {
+		["Limit"] = 500,
+		["Destroy Untill"] = 350,
+		
+		["Safe Tree"] = {
+			"Moon Blossom",
+			"Feijoa",
+			"Moon Mango",
+			"Moon Melon",
+			"Sugar Apple",
+			"Pitcger Plant",			
+			"Loquat"
+		}
 	},
 
-	["Seed"] = {
-		["Mode"] = "Custom", -- Custom , Auto
-		["Custom"] = { -- ถ้าปรับเป็น custom มันจะซื้อเเค่ที่ใส่ในด้านล่าง
-			"Carrot",
-			"Tomato",
-			"Watermelon",
-			"Green Apple",
-			"Sugar Apple",
-			"Feijoa",
-			"Loquat",
-			"Bell Pepper",
-			"Kiwi",
-			"Pineapple",
-			"Banana",
+	Seed = {
+		Buy = {
+			Mode = "Custom", -- Custom , Auto
+			Custom = {
+				"Carrot",
+				"Tomato",				
+				"Watermelon",
+				"Green Apple",
+				"Bell Pepper",
+				"Kiwi",
+				"Pineapple",
+				"Banana",
+				"Loquat",
+				"Pitcger Plant",
+				"Sugar Apple",
+				"Feijoa",
+			}
+		},
+		Place = {
+			Mode = "Lock", -- Select , Lock
+			Select = {
+				"Carrot"
+			},
+			Lock = {
+				"Sunflower",
+				"Dragon Pepper",
+				"Moon Melon",
+				"Rosy Delight",
+				"Moon Blossom",
+				"Elephant Ears",
+			}
 		}
 	},
 	
-	["Craft Event"] = {
-		"Lightning Rod",
-		"Anti Bee Egg"
+	["Seed Pack"] = {
+		Locked = {
+			
+		}
 	},
 	
-	["Event Shop"] =  { -- จะให้ซื้ออะไรบ้างจาก event shop อยากได้อันไหนเพิ่ม เอา -- ออก
-		"Flower Seed Pack",
-		--"Nectarine",
-		--"Hive Fruit",
-		--"Honey Sprinkler",
-		"Bee Egg",
-		--"Bee Crate",
+	Events = {
+		["Summer Harvest"] = {
+			["Do At Money"] = 1000000,
+			["Point Limit"] = 20000,
+		},
+		Craft = {
+			"Lightning Rod",
+			"Anti Bee Egg"
+		},
+		Shop = {
+			"Traveler's Fruit",
+			"Summer Seed Pack",
+			"Hamster",
+			"Oasis Egg",
+			--"Delphinium",
+			"Lily of the Valley",
+		}
 	},
 	
-	["Gear Shop"] = {
-		"Master Sprinkler",
-		"Watering Can",
-		"Basic Sprinkler",
-		"Godly Sprinkler",
-		"Advanced Sprinkler"
-	},
-	["Gear Lock"] = {
-		"Master Sprinkler",
-		"Watering Can",
-		"Lightning Rod",
-		"Basic Sprinkler",
-		"Godly Sprinkler",
-		"Advanced Sprinkler"
+	Gear = {
+		Buy = { 
+			"Master Sprinkler",
+			"Godly Sprinkler",
+			"Basic Sprinkler",
+			"Watering Can",
+			"Advanced Sprinkler"
+		},
+		Lock = {
+			"Master Sprinkler",
+			"Godly Sprinkler",
+			"Basic Sprinkler",
+			"Watering Can",
+			"Advanced Sprinkler"
+		},
 	},
 
-	["Eggs"] = {
-		["Hatch"] = { -- มันจะสุ่มไขซื้อไข่วางไข่ เรียงจากบนลงล่างก่อน
+	Eggs = {
+		Place = {
 			"Anti Bee Egg",
 			"Paradise Egg",
-			"Bee Egg",
+			"Oasis Egg",
 			"Night Egg",
 			"Bug Egg",
 			"Mythical Egg",
-            		"Rare Summer Egg",
 			"Uncommon Egg"
 		},
-		["Safe Eggs"] = { -- จะไม่วางหรือฟักไข่ให้
-			"Bee Egg",
+		Buy = {
+			"Paradise Egg",
+			"Night Egg",
+			"Bug Egg",
+			"Mythical Egg",
+			"Uncommon Egg"
 		}
 	},
 	
-	["Limit Upgrade Slot"] = 1, -- เป็นการปลด ค่าสูงสุดของการวางไข่เเละใช้สัตว์ (สูงสุด 5)
-	["Equip When Done"] = { -- จะให้มันใส่สัตว์อะไรหลังจากปลดอันบนเสร็จเเล้ว
-		"Blood Kiwi",
-		"Chicken"
+	Pets = {
+		["Upgrade Slot"] = {
+			["Pet"] = {
+				
+			},
+			["Limit Upgrade"] = 3,
+			["Equip When Done"] = {
+				"Blood Kiwi",
+				"Chicken"
+			},
+		},
+		Locked = {
+			"Disco Bee",
+			"Butterfly",
+			"Fennec Fox",
+			"Hyacinth Macaw",
+			"Mimic Octopus",
+			"Peacock",
+			"Scarlet Macaw",
+			"Moth",
+			"Queen Bee",
+			"Dragonfly",
+			"Raccoon",
+			"Red Fox",
+			"Blood Owl",
+			"Blood Kiwi",
+			["Chicken"] = 5,
+		}
 	},
 
-	["Webhook"] = {-- webhook เเจ้งเตือน ถ้าได้สัตว์ใน Noti Pets หรือพวกที่มี Noti อื่นๆ
+	Webhook = {
 		UrlPet = "Url Here",
 		UrlSeed = "Url Here",
-		PcName = "Threadripper pro 7995wx"
+		PcName = "Threadripper pro 7995wx",
+		
+		Noti = {
+			Seeds = {
+				"Sunflower",
+				"Dragon Pepper",
+				"Moon Melon",
+				"Rosy Delight",
+				"Moon Blossom",
+				"Elephant Ears",
+			},
+			SeedPack = {
+				"Idk"
+			},
+			Pets = {
+				"Disco Bee",
+				"Butterfly",
+				"Mimic Octopus",
+				"Peacock",
+				"Scarlet Macaw",
+				"Moth",
+				"Brown Mouse",
+				"Queen Bee",
+				"Dragonfly",
+				"Raccoon",
+				"Red Fox",
+			},
+		}
 	},
-	["Noti Seeds"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
-		"Sunflower",
-		"Dragon Pepper",
-		"Elephant Ears"
-	},
-	["Lock Seeds"] = { -- มันจะไม่ใช้ seed ที่เลือก
-		"Sunflower",
-		"Moon Blossom",
-		"Moon Mango",
-		"Dragon Pepper",
-		"Elephant Ears",
-		"Rosy Delight",
-        	"Moon Melon",
-		"Parasol Flower"
-	},
-	["Noti Seed Packs"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
-		""
-	},
-	["Lock Seed Packs"] = { -- มันจะไม่เปิด Seed pack นั้นๆให้
-		""
-	},
-	["Noti Pets"] = { -- สัตว์ที่จะให้มันเเจ้งเตือนใน webhook
-		"Disco Bee",
-		"Butterfly",
-		"Mimic Octopus",
-		"Peacock",
-		"Scarlet Macaw",
-		"Moth",
-		"Brown Mouse",
-		"Queen Bee",
-		"Dragonfly",
-		"Raccoon",
-		"Red Fox",
-	},
-	["Lock Pets"] = { -- สัตว์ที่จะเก็บไว้ไม่ขายไม่เอาไปเเลก slot
-		"Disco Bee",
-		"Butterfly",
-		"Mimic Octopus",
-		"Peacock",
-		"Scarlet Macaw",
-		"Moth",
-		"Queen Bee",
-		"Dragonfly",
-		"Raccoon",
-		"Red Fox",
-		"Moon Cat",
-		"Blood Kiwi", -- ใส่เเบบนี้หมายความว่า เก็บหมดไม่มี limit
-		["Capybara"] = 5,
-        	["Chicken"] = 5,
-        	["Turtle"] = 5,
-        	["Praying Mantis"] = 5,
-	}
 }
 License = "umTEBHmllI5M8SVYERRh5Nutv7RcYmWb"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
