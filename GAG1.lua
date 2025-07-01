@@ -146,6 +146,7 @@ getgenv().ConfigsKaitun = {
 			"Peacock",
 			"Scarlet Macaw",
 			"Echo Frog",
+			"Moon Cat",
 			"Queen Bee",
 			"Dragonfly",
 			"Raccoon",
