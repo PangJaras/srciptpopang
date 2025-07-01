@@ -22,7 +22,7 @@ getgenv().ConfigsKaitun = {
 			Mode = "Custom", -- Custom , Auto
 			Custom = {
 				"Carrot",
-				"Tomato",				
+				"Tomato",
 				"Watermelon",
 				"Green Apple",
 				"Bell Pepper",
@@ -36,9 +36,20 @@ getgenv().ConfigsKaitun = {
 			}
 		},
 		Place = {
-			Mode = "Lock", -- Select , Lock
+			Mode = "Select", -- Select , Lock
 			Select = {
-				"Carrot"
+				"Carrot",
+				"Tomato",
+				"Watermelon",
+				"Green Apple",
+				"Bell Pepper",
+				"Kiwi",
+				"Pineapple",
+				"Banana",
+				"Loquat",
+				"Pitcger Plant",
+				"Sugar Apple",
+				"Feijoa"
 			},
 			Lock = {
 				"Sunflower",
@@ -105,6 +116,7 @@ getgenv().ConfigsKaitun = {
 		},
 		Buy = {
 			"Paradise Egg",
+			"Bee Egg",
 			"Night Egg",
 			"Bug Egg",
 			"Mythical Egg",
@@ -117,7 +129,7 @@ getgenv().ConfigsKaitun = {
 			["Pet"] = {
 				
 			},
-			["Limit Upgrade"] = 3,
+			["Limit Upgrade"] = 5,
 			["Equip When Done"] = {
 				"Blood Kiwi",
 				"Chicken"
@@ -129,16 +141,20 @@ getgenv().ConfigsKaitun = {
 			"Fennec Fox",
 			"Hyacinth Macaw",
 			"Mimic Octopus",
+			"Toucan",
 			"Peacock",
 			"Scarlet Macaw",
-			"Moth",
+			"Echo Frog",
 			"Queen Bee",
 			"Dragonfly",
 			"Raccoon",
 			"Red Fox",
 			"Blood Owl",
 			"Blood Kiwi",
+			"Night Owl",
+			["Capybara"] = 5,
 			["Chicken"] = 5,
+			["Giant Ant"] = 5,
 		}
 	},
 
