@@ -3,7 +3,7 @@ getgenv().ConfigsKaitun = {
 	["Low Cpu"] = false,
 	
 	["Limit Tree"] = {
-		["Limit"] = 500,
+		["Limit"] = 800,
 		["Destroy Untill"] = 350,
 		
 		["Safe Tree"] = {
@@ -23,33 +23,13 @@ getgenv().ConfigsKaitun = {
 			Custom = {
 				"Carrot",
 				"Tomato",
-				"Watermelon",
-				"Green Apple",
-				"Bell Pepper",
-				"Kiwi",
-				"Pineapple",
-				"Banana",
-				"Loquat",
-				"Pitcger Plant",
-				"Sugar Apple",
-				"Feijoa",
 			}
 		},
 		Place = {
 			Mode = "Select", -- Select , Lock
 			Select = {
 				"Carrot",
-				"Tomato",
-				"Watermelon",
-				"Green Apple",
-				"Bell Pepper",
-				"Kiwi",
-				"Pineapple",
-				"Banana",
-				"Loquat",
-				"Pitcger Plant",
-				"Sugar Apple",
-				"Feijoa"
+				"Tomato"
 			},
 			Lock = {
 				"Sunflower",
@@ -71,7 +51,7 @@ getgenv().ConfigsKaitun = {
 	Events = {
 		["Summer Harvest"] = {
 			["Do At Money"] = 1000000,
-			["Point Limit"] = 20000,
+			["Point Limit"] = 50000,
 		},
 		Craft = {
 			"Lightning Rod",
