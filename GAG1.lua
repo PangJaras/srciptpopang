@@ -23,6 +23,7 @@ getgenv().ConfigsKaitun = {
 			Custom = {
 				"Carrot",
 				"Tomato",
+				"Watermelon",
 				"Green Apple",
 				"Avocado",
 				"Banana",
@@ -39,6 +40,7 @@ getgenv().ConfigsKaitun = {
 			Select = {
 				"Carrot",
 				"Tomato",
+				"Watermelon",
 				"Green Apple",
 				"Avocado",
 				"Banana",
@@ -106,20 +108,20 @@ getgenv().ConfigsKaitun = {
 	Eggs = {
 		Place = {
 			"Anti Bee Egg",
+			"Rere Summer Egg"
 			"Paradise Egg",
 			"Oasis Egg",
 			"Night Egg",
 			"Bug Egg",
-			"Mythical Egg",
-			"Rere Summer Egg"
+			"Mythical Egg"
 		},
 		Buy = {
 			"Paradise Egg",
+			"Rere Summer Egg"
 			"Bee Egg",
 			"Night Egg",
 			"Bug Egg",
 			"Mythical Egg",
-			"Rere Summer Egg"
 		}
 	},
 	
