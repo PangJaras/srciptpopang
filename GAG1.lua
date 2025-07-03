@@ -70,7 +70,7 @@ getgenv().ConfigsKaitun = {
 	
 	Events = {
 		["Summer Harvest"] = {
-			["Do At Money"] = 100,
+			["Do At Money"] = 10000000,
 			["Point Limit"] = 50000,
 		},
 		Craft = {
