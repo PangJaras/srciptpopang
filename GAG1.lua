@@ -3,7 +3,7 @@ getgenv().ConfigsKaitun = {
 	["Low Cpu"] = false,
 	
 	["Limit Tree"] = {
-		["Limit"] = 800,
+		["Limit"] = 500,
 		["Destroy Untill"] = 350,
 		
 		["Safe Tree"] = {
