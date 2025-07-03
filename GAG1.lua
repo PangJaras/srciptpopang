@@ -126,7 +126,7 @@ getgenv().ConfigsKaitun = {
 			["Pet"] = {
 				
 			},
-			["Limit Upgrade"] = 3,
+			["Limit Upgrade"] = 2,
 			["Equip When Done"] = {
 				"Blood Kiwi",
 				"Chicken"
