@@ -23,13 +23,31 @@ getgenv().ConfigsKaitun = {
 			Custom = {
 				"Carrot",
 				"Tomato",
+				"Green Apple",
+				"Avocado",
+				"Banana",
+				"Pineapple",
+				"Kiwi",
+				"Prickly Pear",
+				"Loquat",
+				"Pitcger Plant",
+				"Feijoa",
 			}
 		},
 		Place = {
 			Mode = "Select", -- Select , Lock
 			Select = {
 				"Carrot",
-				"Tomato"
+				"Tomato",
+				"Green Apple",
+				"Avocado",
+				"Banana",
+				"Pineapple",
+				"Kiwi",
+				"Prickly Pear",
+				"Loquat",
+				"Pitcger Plant",
+				"Feijoa"
 			},
 			Lock = {
 				"Sunflower",
