@@ -2,14 +2,16 @@ getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
 	["Low Cpu"] = false,
 	
+	["Rejoin When Update"] = true,
+
 	["Limit Tree"] = {
-		["Limit"] = 500,
-		["Destroy Untill"] = 350,
-		
+		["Limit"] = 300,
+		["Destroy Untill"] = 250,
+
 		["Safe Tree"] = {
-			"Moon Blossom",
-			"Moon Mango",
-			"Moon Melon"
+			"Sugar Apple",
+			"Ember Lily",
+			"Burning Bud"
 		}
 	},
 
@@ -18,64 +20,66 @@ getgenv().ConfigsKaitun = {
 			Mode = "Custom", -- Custom , Auto
 			Custom = {
 				"Carrot",
-				"Tomato",
+				"Bamboo",
+				"Pumpkin",
+				"Daffodil",
+				"Orange Tulip",
 				"Watermelon",
-				"Green Apple",
-				"Avocado",
-				"Banana",
-				"Pineapple",
-				"Kiwi",
-				"Prickly Pear",
-				"Loquat",
-				"Pitcger Plant",
-				"Feijoa",
+				"Mushroom",
+				"Nightshade",
+				"Sugar Apple",
+				"Ember Lily",
+				"Burning Bud",
 			}
 		},
 		Place = {
 			Mode = "Select", -- Select , Lock
 			Select = {
 				"Carrot",
-				"Tomato",
+				"Bamboo",
+				"Pumpkin",
+				"Daffodil",
+				"Orange Tulip",
 				"Watermelon",
-				"Green Apple",
-				"Avocado",
-				"Banana",
-				"Pineapple",
-				"Kiwi",
-				"Prickly Pear",
-				"Loquat",
-				"Pitcger Plant",
-				"Feijoa"
+				"Mushroom",
+				"Nightshade",
+				"Sugar Apple",
+				"Ember Lily",
+				"Burning Bud"
 			},
 			Lock = {
 				"Sunflower",
-				"Dragon Pepper",
-				"Moon Melon",
-				"Rosy Delight",
-				"Moon Blossom",
 				"Elephant Ears",
+				"Dragon Pepper",
 			}
 		}
 	},
-	
+
 	["Seed Pack"] = {
 		Locked = {
-			
+			"Sugar Apple"
 		}
 	},
-	
+
 	Events = {
+		Dino = true,
+		["Traveling Shop"] = {
+			"Liberty Lily",
+			"Firework Flower",
+			--"Firework",
+			"Bald Eagle",
+			--"July 4th Crate",
+		},
 		["Summer Harvest"] = {
-			["Do At Money"] = 10000000,
-			["Point Limit"] = 50000,
+			["Do At Money"] = 1000000,
+			["Point Limit"] = 15000,
 		},
 		Craft = {
 			"Lightning Rod",
-			"Honeysuckle",
-			"Anti Bee Egg"
+			"Anti Bee Egg",
 		},
 		Shop = {
-			"Traveler's Fruit",
+			--"Traveler's Fruit",
 			"Summer Seed Pack",
 			"Hamster",
 			"Oasis Egg",
@@ -83,19 +87,21 @@ getgenv().ConfigsKaitun = {
 			"Lily of the Valley",
 		}
 	},
-	
+
 	Gear = {
 		Buy = { 
 			"Master Sprinkler",
-			"Godly Sprinkler",
 			"Basic Sprinkler",
+			"Godly Sprinkler",
+			"Advanced Sprinkler",
 			"Watering Can",
-			"Advanced Sprinkler"
+			"Lightning Rod",
 		},
 		Lock = {
 			"Master Sprinkler",
 			"Godly Sprinkler",
 			"Basic Sprinkler",
+			"Lightning Rod",
 			"Watering Can",
 			"Advanced Sprinkler"
 		},
@@ -103,37 +109,44 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
+			"Dinosaur Egg",
 			"Oasis Egg",
 			"Anti Bee Egg",
 			"Paradise Egg",
 			"Night Egg",
 			"Bug Egg",
-			"Rere Summer Egg",
-			"Mythical Egg"
+			"Mythical Egg",
+			"Rare Egg",
+			"Rare Summer Egg",
 		},
 		Buy = {
+			"Anti Bee Egg",
 			"Paradise Egg",
 			"Bee Egg",
 			"Night Egg",
 			"Bug Egg",
-			"Rere Summer Egg",
-			"Mythical Egg"
+			"Mythical Egg",
+			"Rare Egg",
+			"Rare Summer Egg",
 		}
 	},
-	
+
 	Pets = {
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				
+				"Starfish",
 			},
-			["Limit Upgrade"] = 2,
+			["Limit Upgrade"] = 1,
 			["Equip When Done"] = {
 				"Blood Kiwi",
-				"Chicken"
+				"Rooster",
+				"Seal",
 			},
 		},
 		Locked = {
 			"Disco Bee",
+			"T-Rex",
+			"Triceratops",			
 			"Butterfly",
 			"Fennec Fox",
 			"Hyacinth Macaw",
@@ -150,42 +163,41 @@ getgenv().ConfigsKaitun = {
 			"Blood Owl",
 			"Blood Kiwi",
 			"Night Owl",
-			["Capybara"] = 5,
-			["Chicken"] = 5,
-			["Giant Ant"] = 5,
+			["Rooster"] = 5,
+		},
+		LockPet_Weight = 10, -- if Weight >= 10 they will locked,
+		Instant_Sell = {
+			"Dog",
 		}
 	},
 
 	Webhook = {
-		UrlPet = "Url Here",
-		UrlSeed = "Url Here",
-		PcName = "Threadripper pro 7995wx",
-		
+		UrlPet = "",
+		UrlSeed = "",
+		PcName = "PC",
+
 		Noti = {
 			Seeds = {
 				"Sunflower",
 				"Dragon Pepper",
-				"Moon Melon",
-				"Rosy Delight",
-				"Moon Blossom",
 				"Elephant Ears",
 			},
 			SeedPack = {
-				"Idk"
+				"Idk",
 			},
 			Pets = {
+				"Dragonfly",
+				"Night Owl",
+				"Queen Bee",
+				"Raccoon",
+				"Disco Bee",
+				"Fennec Fox",
 				"Disco Bee",
 				"Butterfly",
 				"Mimic Octopus",
-				"Peacock",
-				"Scarlet Macaw",
-				"Moth",
-				"Brown Mouse",
-				"Queen Bee",
-				"Dragonfly",
-				"Raccoon",
 				"Red Fox",
 			},
+			Pet_Weight_Noti = true,
 		}
 	},
 }
