@@ -9,9 +9,7 @@ getgenv().ConfigsKaitun = {
 		["Destroy Untill"] = 250,
 
 		["Safe Tree"] = {
-			"Sugar Apple",
-			"Ember Lily",
-			"Burning Bud"
+			"Moon Blossom"
 		}
 	},
 
@@ -20,6 +18,8 @@ getgenv().ConfigsKaitun = {
 			Mode = "Custom", -- Custom , Auto
 			Custom = {
 				"Carrot",
+				"Coconut",
+				"Dragon Fruit",
 				"Bamboo",
 				"Pumpkin",
 				"Daffodil",
@@ -33,9 +33,11 @@ getgenv().ConfigsKaitun = {
 			}
 		},
 		Place = {
-			Mode = "Select", -- Select , Lock
+			Mode = "Lock", -- Select , Lock
 			Select = {
 				"Carrot",
+				"Coconut",
+				"Dragon Fruit",
 				"Bamboo",
 				"Pumpkin",
 				"Daffodil",
@@ -45,35 +47,34 @@ getgenv().ConfigsKaitun = {
 				"Nightshade",
 				"Sugar Apple",
 				"Ember Lily",
-				"Burning Bud"
+				"Burning Bud",
 			},
 			Lock = {
 				"Sunflower",
 				"Elephant Ears",
 				"Dragon Pepper",
+				"Bone Blossom"
 			}
 		}
 	},
 
 	["Seed Pack"] = {
 		Locked = {
+
 		}
 	},
 
 	Events = {
 		Dino = true,
+		
 		["Traveling Shop"] = {
-			"Liberty Lily",
-			"Firework Flower",
-			--"Firework",
 			"Bald Eagle",
-			--"July 4th Crate",
-		},
-		["Summer Harvest"] = {
-			["Do At Money"] = 1000000,
-			["Point Limit"] = 15000,
+			"Night Staff",
+			"Star Caller"
 		},
 		Craft = {
+			"Ancient Seed Pack",
+			
 			"Lightning Rod",
 			"Anti Bee Egg",
 		},
@@ -116,6 +117,7 @@ getgenv().ConfigsKaitun = {
 			"Bug Egg",
 			"Mythical Egg",
 			"Rare Egg",
+			"Common Egg",
 			"Rare Summer Egg",
 		},
 		Buy = {
@@ -125,6 +127,7 @@ getgenv().ConfigsKaitun = {
 			"Night Egg",
 			"Bug Egg",
 			"Mythical Egg",
+			"Common Egg",
 			"Rare Egg",
 			"Rare Summer Egg",
 		}
@@ -143,41 +146,40 @@ getgenv().ConfigsKaitun = {
 			},
 		},
 		Locked = {
-			"Disco Bee",
 			"T-Rex",
-			"Triceratops",			
-			"Butterfly",
+			"Brontosaurus",
+			"Dragonfly",
+			"Night Owl",
+			"Queen Bee",
+			"Raccoon",
+			"Disco Bee",
 			"Fennec Fox",
-			"Hyacinth Macaw",
+			"Disco Bee",
+			"Butterfly",
 			"Mimic Octopus",
-			"Toucan",
-			"Peacock",
-			"Scarlet Macaw",
-			"Echo Frog",
 			"Moon Cat",
 			"Queen Bee",
-			"Dragonfly",
-			"Raccoon",
 			"Red Fox",
 			"Blood Owl",
 			"Blood Kiwi",
 			"Night Owl",
+			["Triceratops"] = 5,
 			["Rooster"] = 5,
 		},
 		LockPet_Weight = 10, -- if Weight >= 10 they will locked,
 		Instant_Sell = {
-			"Dog",
+			"Idk",
 		}
 	},
 
 	Webhook = {
-		UrlPet = "",
-		UrlSeed = "",
-		PcName = "PC",
+		UrlPet = "https://discord.com/api/webhooks/1392908710485164244/a8qAsqDiLG3W2Eqyw2l1WydHaUtEWXRmqE9Tj8xvdqd5JvFwUSFrHygW6v1UubzlvkAu",
+		UrlSeed = "https://discord.com/api/webhooks/1392908808199602176/FwE2whuLZbj_4yfdWf_2hpCfkb4V-FFOhkO9Ke5JFP_4NKkJJokG5q8IE2hN0PUbbXXk",
+		PcName = "ALL",
 
 		Noti = {
 			Seeds = {
-				"Sunflower",
+				"Bone Blossom",
 				"Dragon Pepper",
 				"Elephant Ears",
 			},
@@ -185,6 +187,7 @@ getgenv().ConfigsKaitun = {
 				"Idk",
 			},
 			Pets = {
+				"T-Rex",
 				"Dragonfly",
 				"Night Owl",
 				"Queen Bee",
