@@ -167,7 +167,7 @@ getgenv().ConfigsKaitun = {
 			["Triceratops"] = 5,
 			["Rooster"] = 5,
 		},
-		LockPet_Weight = 10, -- if Weight >= 10 they will locked,
+		LockPet_Weight = 6, -- if Weight >= 10 they will locked,
 		Instant_Sell = {
 			"Idk",
 		}
