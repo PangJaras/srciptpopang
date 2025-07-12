@@ -18,8 +18,6 @@ getgenv().ConfigsKaitun = {
 			Mode = "Custom", -- Custom , Auto
 			Custom = {
 				"Carrot",
-				"Coconut",
-				"Dragon Fruit",
 				"Bamboo",
 				"Pumpkin",
 				"Daffodil",
@@ -108,6 +106,7 @@ getgenv().ConfigsKaitun = {
 	Eggs = {
 		Place = {
 			"Dinosaur Egg",
+			"Primal Egg",
 			"Oasis Egg",
 			"Anti Bee Egg",
 			"Paradise Egg",
@@ -147,6 +146,7 @@ getgenv().ConfigsKaitun = {
 		},
 		Locked = {
 			"T-Rex",
+			"Spinosaurus",
 			"Brontosaurus",
 			"Dragonfly",
 			"Night Owl",
@@ -189,6 +189,7 @@ getgenv().ConfigsKaitun = {
 			},
 			Pets = {
 				"T-Rex",
+				"Spinosaurus",
 				"Brontosaurus",
 				"Dragonfly",
 				"Night Owl",
