@@ -49,6 +49,7 @@ getgenv().ConfigsKaitun = {
 			},
 			Lock = {
 				"Sunflower",
+				"Fossilight",
 				"Elephant Ears",
 				"Dragon Pepper",
 				"Bone Blossom"
@@ -162,8 +163,8 @@ getgenv().ConfigsKaitun = {
 			"Red Fox",
 			"Blood Owl",
 			"Blood Kiwi",
+			"Capybara",
 			"Night Owl",
-			["Capybara"] = 3,
 			["Triceratops"] = 5,
 			["Rooster"] = 5,
 		},
