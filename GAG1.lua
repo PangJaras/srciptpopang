@@ -148,6 +148,8 @@ getgenv().ConfigsKaitun = {
 		Locked = {
 			"T-Rex",
 			"Spinosaurus",
+			"Ankylosaurus",
+			"Dilophosaurus",
 			"Brontosaurus",
 			"Dragonfly",
 			"Night Owl",
@@ -192,6 +194,7 @@ getgenv().ConfigsKaitun = {
 			Pets = {
 				"T-Rex",
 				"Spinosaurus",
+				"Ankylosaurus",
 				"Brontosaurus",
 				"Dragonfly",
 				"Night Owl",
