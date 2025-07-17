@@ -15,7 +15,7 @@ getgenv().ConfigsKaitun = {
 
 	Seed = {
 		Buy = {
-			Mode = "Custom", -- Custom , Auto
+			Mode = "Auto", -- Custom , Auto
 			Custom = {
 				"Carrot",
 				"Bamboo",
