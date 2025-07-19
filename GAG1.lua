@@ -1,17 +1,22 @@
 getgenv().ConfigsKaitun = {
-	["Stack Plant"] = true,
 	["Low Cpu"] = false,
-	
+
 	["Rejoin When Update"] = true,
 
 	["Limit Tree"] = {
 		["Limit"] = 300,
-		["Destroy Untill"] = 250,
+		["Destroy Untill"] = 300,
 
 		["Safe Tree"] = {
-			"Moon Blossom"
+			"Moon Blossom",
+			"Bone Blossom",
+			"Moon Melon",
+			"Horned Dinoshroom",
+			"Firefly Fern",
+			"Fossilight"
 		}
 	},
+
 
 	Seed = {
 		Buy = {
@@ -23,7 +28,12 @@ getgenv().ConfigsKaitun = {
 				"Daffodil",
 				"Orange Tulip",
 				"Watermelon",
+				"Beanstalk",
 				"Mushroom",
+				"Pepper",
+				"Grape",
+				"Mango",
+				"Cacao",
 				"Nightshade",
 				"Sugar Apple",
 				"Ember Lily",
@@ -34,22 +44,11 @@ getgenv().ConfigsKaitun = {
 			Mode = "Lock", -- Select , Lock
 			Select = {
 				"Carrot",
-				"Coconut",
-				"Dragon Fruit",
-				"Bamboo",
-				"Pumpkin",
-				"Daffodil",
-				"Orange Tulip",
-				"Watermelon",
-				"Mushroom",
-				"Nightshade",
-				"Sugar Apple",
-				"Ember Lily",
-				"Burning Bud",
 			},
 			Lock = {
 				"Sunflower",
 				"Fossilight",
+				"Maple Apple",
 				"Elephant Ears",
 				"Dragon Pepper",
 				"Bone Blossom"
@@ -65,25 +64,25 @@ getgenv().ConfigsKaitun = {
 
 	Events = {
 		Dino = true,
-		
+
 		["Traveling Shop"] = {
 			"Bald Eagle",
 			"Night Staff",
-			"Star Caller"
+			"Star Caller",
+			"Bee Egg"
 		},
 		Craft = {
-			"Ancient Seed Pack",
-			
 			"Lightning Rod",
 			"Anti Bee Egg",
 		},
 		Shop = {
-			--"Traveler's Fruit",
-			"Summer Seed Pack",
-			"Hamster",
-			"Oasis Egg",
-			--"Delphinium",
-			"Lily of the Valley",
+			"Zen Seed Pack",
+			"Zen Egg",
+			"Zenflare",
+			"Soft Sunshine",
+			--"Koi",
+			"Spiked Mango",
+			"Pet Shard Tranquil"
 		}
 	},
 
@@ -93,21 +92,18 @@ getgenv().ConfigsKaitun = {
 			"Basic Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
-			"Watering Can",
-			"Lightning Rod",
+			"Watering Can"
 		},
 		Lock = {
 			"Master Sprinkler",
-			"Godly Sprinkler",
-			"Lightning Rod",
-			"Watering Can",
 		},
 	},
 
 	Eggs = {
 		Place = {
-			"Dinosaur Egg",
+			"Zen Egg",
 			"Primal Egg",
+			"Dinosaur Egg",
 			"Oasis Egg",
 			"Anti Bee Egg",
 			"Paradise Egg",
@@ -115,9 +111,7 @@ getgenv().ConfigsKaitun = {
 			"Bug Egg",
 			"Mythical Egg",
 			"Rare Egg",
-			"Common Summer Egg",
 			"Rare Summer Egg",
-			"Common Egg",
 		},
 		Buy = {
 			"Anti Bee Egg",
@@ -126,14 +120,14 @@ getgenv().ConfigsKaitun = {
 			"Night Egg",
 			"Bug Egg",
 			"Mythical Egg",
-			"Common Egg",
 			"Rare Egg",
-			"Common Summer Egg",
 			"Rare Summer Egg",
+			"Common Egg"
 		}
 	},
 
 	Pets = {
+		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				"Starfish",
@@ -142,15 +136,14 @@ getgenv().ConfigsKaitun = {
 			["Equip When Done"] = {
 				"Blood Kiwi",
 				"Rooster",
-				"Seal",
+				"Tanchozuru",
 			},
 		},
 		Locked = {
+			"Kitsune",
+			"Kappa",
 			"T-Rex",
 			"Spinosaurus",
-			"Ankylosaurus",
-			"Dilophosaurus",
-			"Brontosaurus",
 			"Dragonfly",
 			"Night Owl",
 			"Queen Bee",
@@ -160,40 +153,42 @@ getgenv().ConfigsKaitun = {
 			"Disco Bee",
 			"Butterfly",
 			"Mimic Octopus",
-			"Moon Cat",
 			"Queen Bee",
 			"Red Fox",
 			"Blood Owl",
 			"Blood Kiwi",
-			"Capybara",
-			"Night Owl",
-			["Starfish"] = 10,
-			["Triceratops"] = 5,
+			"Pterodactyl",
+			"Brontosaurus",
 			["Rooster"] = 5,
+			["Tanchozuru"] = 5,
 		},
 		LockPet_Weight = 6, -- if Weight >= 10 they will locked,
 		Instant_Sell = {
-			"Idk",
+			"Dog",
 		}
 	},
 
 	Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1392908710485164244/a8qAsqDiLG3W2Eqyw2l1WydHaUtEWXRmqE9Tj8xvdqd5JvFwUSFrHygW6v1UubzlvkAu",
 		UrlSeed = "https://discord.com/api/webhooks/1392908808199602176/FwE2whuLZbj_4yfdWf_2hpCfkb4V-FFOhkO9Ke5JFP_4NKkJJokG5q8IE2hN0PUbbXXk",
-		PcName = "ALL",
+		PcName = "All PC2-13",
 
 		Noti = {
 			Seeds = {
-				"Bone Blossom",
+				"Sunflower",
 				"Fossilight",
-				"Dragon Pepper",
+				"Maple Apple",
 				"Elephant Ears",
+				"Dragon Pepper",
+				"Bone Blossom"
 			},
 			SeedPack = {
 				"Idk",
 			},
 			Pets = {
 				"T-Rex",
+				"Kitsune",
+				"Kappa",
 				"Spinosaurus",
 				"Dragonfly",
 				"Night Owl",
