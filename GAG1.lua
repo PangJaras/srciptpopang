@@ -161,6 +161,7 @@ getgenv().ConfigsKaitun = {
 			"Blood Kiwi",
 			"Pterodactyl",
 			"Brontosaurus",
+			["Nihonzaru"] = 5,
 			["Rooster"] = 5,
 			["Tanchozuru"] = 5,
 		},
@@ -190,7 +191,6 @@ getgenv().ConfigsKaitun = {
 			Pets = {
 				"T-Rex",
 				"Kitsune",
-				"Kappa",
 				"Spinosaurus",
 				"Dragonfly",
 				"Night Owl",
