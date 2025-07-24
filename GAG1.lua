@@ -11,6 +11,9 @@ getgenv().ConfigsKaitun = {
 
 		["Safe Tree"] = {
 			"Moon Blossom",
+			"Burning Bud",
+			"Embar Lily",
+			"Cacao",
 			"Sugar Apple",
 			"Spiked Mango",
 			"Giant Pinecone",
