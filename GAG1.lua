@@ -1,10 +1,10 @@
-getgenv().ConfigsKaitun = { -- thx config cradit to npk02
-	["Stack Plant"] = true,
+getgenv().ConfigsKaitun = {
+	["Block Pet Gift"] = true,
 	
-	["Low Cpu"] = false,
-	["Auto Rejoin"] = false,
+	["Low Cpu"] = true,
+	["Auto Rejoin"] = true,
 	
-	["Rejoin When Update"] = true,
+	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
 		["Limit"] = 300,
 		["Destroy Untill"] = 290,
