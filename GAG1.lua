@@ -77,7 +77,7 @@ getgenv().ConfigsKaitun = {
 	Events = {
 		["Zen Event"] = {
 			["Restocking"] = { -- Minimumthing to restock
-				Max_Restocks_Price = 50_000_000,
+				Max_Restocks_Price = 3_000_000,
 				Minimum_Money = 10_000_000,
 				Minimum_Chi = 200
 			},
@@ -154,33 +154,13 @@ getgenv().ConfigsKaitun = {
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				["Starfish"] = { 5, 100 },
+				["Starfish"] = { 6, 100, 1 },
 			},
-			["Limit Upgrade"] = 2,
-			["Equip When Done"] = {
-				["Seal"] = { 1, 70, 1 }, -- 1 mean equip only 1 pet , 70 mean equip only level pet lower than 70 the one on the last mean first priority will ues first if possible 
+			["Limit Upgrade"] = 3,
+			["Equip When Done"] = { 
+				["Seal"] = { 1, 70, 1 },
 				["Starfish"] = { 1, 70 },
-				["Koi"] = { 1, 70 },
-				["Tanuki"] = { 1, 70 },
-				["Tanchozuru"] = { 1, 70 },
-				["Kappa"] = { 1, 70 },
-				["Kitsune"] = { 1, 70 },
-				["Dilophosaurus"] = { 1, 70 },
-				["Moon Cat"] = { 1, 70 },
-				["Capybara"] = { 1, 70 },
-				["Spinosaurus"] = { 1, 70 },
-				["Bear Bee"] = { 1, 70 },
-				["T-Rex"] = { 1, 70 },
-				["Brontosaurus"] = { 1, 70 },
-				["Disco Bee"] = { 1, 70 },
-				["Butterfly"] = { 1, 70 },
-				["Queen Bee"] = { 1, 70 },
-				["Dragonfly"] = { 1, 70 },
-				["Raccoon"] = { 1, 70 },
-				["Fennec Fox"] = { 1, 70 },
-				["Mimic Octopus"] = { 1, 70 },
-				["Red Fox"] = { 1, 70 },
-				["Blood Owl"] = { 1, 70 },
+				["Tanchozuru"] = { 5, 70 },
 			},
 		},
 		Locked = {
