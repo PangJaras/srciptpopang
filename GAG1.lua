@@ -59,6 +59,7 @@ getgenv().ConfigsKaitun = {
 			},
 			Lock = {
 				"Maple Apple",
+				"Tranquil Bloom",
 				"Sunflower",
 				"Dragon Pepper",
 				"Elephant Ears",
@@ -206,6 +207,7 @@ getgenv().ConfigsKaitun = {
 		Noti = {
 			Seeds = {
 				"Sunflower",
+				"Tranquil Bloom",
 				"Fossilight",
 				"Maple Apple",
 				"Elephant Ears",
