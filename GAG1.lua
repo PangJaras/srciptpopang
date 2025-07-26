@@ -1,8 +1,8 @@
 getgenv().ConfigsKaitun = {
 	["Block Pet Gift"] = true,
 
-	["Low Cpu"] = true,
-	["Auto Rejoin"] = true,
+	["Low Cpu"] = false,
+	["Auto Rejoin"] = false,
 
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
@@ -11,6 +11,13 @@ getgenv().ConfigsKaitun = {
 
 		["Safe Tree"] = {
 			"Moon Blossom",
+			"Burning Bud",
+			"Embar Lily",
+			"Cacao",
+			"Sugar Apple",
+			"Spiked Mango",
+			"Giant Pinecone",
+		  	"Beanstalk",
 			"Fossilight",
 		}
 	},
@@ -55,6 +62,7 @@ getgenv().ConfigsKaitun = {
 				"Sunflower",
 				"Dragon Pepper",
 				"Elephant Ears",
+				"Tranquil Bloom",
 				"Moon Melon",
 				"Easter Egg",
 				"Moon Mango",
@@ -73,7 +81,7 @@ getgenv().ConfigsKaitun = {
 	Events = {
 		["Zen Event"] = {
 			["Restocking"] = { -- Minimumthing to restock
-				Max_Restocks_Price = 50_000_000,
+				Max_Restocks_Price = 3_000_000,
 				Minimum_Money = 10_000_000,
 				Minimum_Chi = 200
 			},
@@ -113,15 +121,13 @@ getgenv().ConfigsKaitun = {
 			"Basic Sprinkler",
 			"Lightning Rod",
 			"Level Up Lollipop",
+			"Watering Can",
 			"Medium Treat",
 			"Medium Toy",
 		},
 		Lock = {
 			"Master Sprinkler",
-			"Godly Sprinkler",
-			"Advanced Sprinkler",
-			"Basic Sprinkler",
-			"Lightning Rod",
+			"Watering Can",
 		},
 	},
 
@@ -159,31 +165,10 @@ getgenv().ConfigsKaitun = {
 			["Pet"] = {
 				["Starfish"] = { 5, 100, 1 },
 			},
-			["Limit Upgrade"] = 2,
-			["Equip When Done"] = {
-				["Seal"] = { 1, 70, 1 }, -- 1 mean equip only 1 pet , 70 mean equip only level pet lower than 70 the one on the last mean first priority will ues first if possible 
+			["Limit Upgrade"] = 3,
+			["Equip When Done"] = { 
 				["Starfish"] = { 1, 70 },
-				["Koi"] = { 1, 70 },
-				["Tanuki"] = { 1, 70 },
-				["Tanchozuru"] = { 1, 70 },
-				["Kappa"] = { 1, 70 },
-				["Kitsune"] = { 1, 70 },
-				["Dilophosaurus"] = { 1, 70 },
-				["Moon Cat"] = { 1, 70 },
-				["Capybara"] = { 1, 70 },
-				["Spinosaurus"] = { 1, 70 },
-				["Bear Bee"] = { 1, 70 },
-				["T-Rex"] = { 1, 70 },
-				["Brontosaurus"] = { 1, 70 },
-				["Disco Bee"] = { 1, 70 },
-				["Butterfly"] = { 1, 70 },
-				["Queen Bee"] = { 1, 70 },
-				["Dragonfly"] = { 1, 70 },
-				["Raccoon"] = { 1, 70 },
-				["Fennec Fox"] = { 1, 70 },
-				["Mimic Octopus"] = { 1, 70 },
-				["Red Fox"] = { 1, 70 },
-				["Blood Owl"] = { 1, 70 },
+				["Tanchozuru"] = { 5, 70 },
 			},
 		},
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
@@ -212,10 +197,12 @@ getgenv().ConfigsKaitun = {
 			"Red Fox",
 			"Blood Owl",
 			["Starfish"] = 10,
+			["Tanchozuru"] = 5,
 		},
-		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
+		LockPet_Weight = 5, -- if Weight >= 10 they will locked,
 		Instant_Sell = {		
 			"Shiba Inu",
+			"Dog",
 		}
 	},
 
@@ -227,20 +214,32 @@ getgenv().ConfigsKaitun = {
 		Noti = {
 			Seeds = {
 				"Sunflower",
-				"Dragon Pepper",
+				"Fossilight",
+				"Tranquil Bloom",
+				"Maple Apple",
 				"Elephant Ears",
+				"Dragon Pepper",
+				"Bone Blossom"
 			},
 			SeedPack = {
 				"Idk"
 			},
 			Pets = {
+				"T-Rex",
+				"Corrupted Kitsune",
+				"Raiju",
+				"Kitsune",
+				"Spinosaurus",
+				"Dragonfly",
+				"Night Owl",
+				"Queen Bee",
+				"Raccoon",
+				"Disco Bee",
+				"Fennec Fox",
 				"Disco Bee",
 				"Butterfly",
 				"Mimic Octopus",
-				"Queen Bee",
-				"Dragonfly",
-				"Raccoon",
-				"Fennec Fox",
+				"Red Fox",
 			},
 			Pet_Weight_Noti = true,
 		}
