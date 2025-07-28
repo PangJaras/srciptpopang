@@ -101,11 +101,6 @@ getgenv().ConfigsKaitun = {
 		},
 		Shop = {
 			"Zen Egg",
-			"Zen Seed Pack",
-			"Spiked Mango",
-			"Pet Shard Tranquil",
-			"Pet Shard Corrupted",
-			"Koi",
 			"Soft Sunshine",
 			"Sakura Bush",
 			"Raiju",
