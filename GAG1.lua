@@ -1,8 +1,8 @@
 getgenv().ConfigsKaitun = {
 	["Block Pet Gift"] = true,
 
-	["Low Cpu"] = false,
-	["Auto Rejoin"] = false,
+	["Low Cpu"] = true,
+	["Auto Rejoin"] = true,
 
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
@@ -11,6 +11,7 @@ getgenv().ConfigsKaitun = {
 
 		["Safe Tree"] = {
 			"Moon Blossom",
+			"Serenity",
 			"Burning Bud",
 			"Embar Lily",
 			"Cacao",
@@ -19,6 +20,14 @@ getgenv().ConfigsKaitun = {
 			"Giant Pinecone",
 		  	"Beanstalk",
 			"Fossilight",
+
+			-- locked fruit for zen event
+			["Tomato"] = 1, ["Strawberry"] = 1, ["Blueberry"] = 1,
+			["Orange Tulip"] = 1, ["Corn"] = 1, ["Daffodil"] = 1,
+			["Bamboo"] = 1, ["Apple"] = 1, ["Coconut"] = 1,
+			["Pumpkin"] = 1, ["Watermelon"] = 1, ["Cactus"] = 1,
+			["Dragon Fruit"] = 1, ["Mango"] = 1, ["Grape"] = 1,
+			["Mushroom"] = 1, ["Pepper"] = 1, ["Cacao"] = 1
 		}
 	},
 
@@ -83,12 +92,12 @@ getgenv().ConfigsKaitun = {
 			["Restocking"] = { -- Minimumthing to restock
 				Max_Restocks_Price = 3_000_000,
 				Minimum_Money = 10_000_000,
-				Minimum_Chi = 200
+				Minimum_Chi = 30
 			},
 			["Doing"] = {
-				Minimum_Money = 30_000_000, -- minimum money to start play this event
-				First_Upgrade_Tree = 4,
-				Maximum_Chi = 250,
+				Minimum_Money = 10, -- minimum money to start play this event
+				First_Upgrade_Tree = 1,
+				Maximum_Chi = 50,
 			}
 		},
 		["Traveling Shop"] = {
@@ -101,8 +110,8 @@ getgenv().ConfigsKaitun = {
 		},
 		Shop = {
 			"Zen Egg",
-			"Soft Sunshine",
-			"Sakura Bush",
+			"Zenflare",
+			"Zen Seed Pack",
 			"Raiju",
 		},
 		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
@@ -121,7 +130,6 @@ getgenv().ConfigsKaitun = {
 			"Medium Toy",
 		},
 		Lock = {
-			"Master Sprinkler",
 			"Watering Can",
 		},
 	},
@@ -129,16 +137,7 @@ getgenv().ConfigsKaitun = {
 	Eggs = {
 		Place = {
 			"Zen Egg",
-			"Primal Egg",
-			"Dinosaur Egg",
-			"Oasis Egg",
-			"Anti Bee Egg",
-			"Night Egg",
-			"Bug Egg",
-			"Paradise Egg",
-			"Bee Egg",
-			"Rare Summer Egg",
-			"Mythical Egg",
+			"Common Summer Egg",
 		},
 		Buy = {
 			"Bee Egg",
