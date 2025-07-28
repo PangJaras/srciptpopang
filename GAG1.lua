@@ -139,7 +139,6 @@ getgenv().ConfigsKaitun = {
 			"Bee Egg",
 			"Rare Summer Egg",
 			"Mythical Egg",
-			"Common Egg",
 		},
 		Buy = {
 			"Bee Egg",
@@ -202,8 +201,8 @@ getgenv().ConfigsKaitun = {
 	},
 
 	Webhook = {
-		UrlPet = "https://discord.com/api/webhooks/1398800175199162419/slYdN7hXNzZ6PfSK4hHG2MUXJq04ZEJZbBp-9vlE_gVQ0Tn4UBBshDI-nmiCp9Yhgji-",
-		UrlSeed = "https://discord.com/api/webhooks/1398800362647060563/n_Cjip89ci1_AagRzm4ZDY2W8E4o5LsqXMP7t8HoRdp8f3gmJXwptS-RYuo0BPnD5Hvv",
+		UrlPet = "https://discord.com/api/webhooks/1399275807074942986/Y8pLYZ6617b1SvXR3PAjqEqPio6zhAGvZFUML2MGGW6glcAGcTbtFfMbIWGaHAtDQipI",
+		UrlSeed = "xxx",
 		PcName = "PC-ALL 2-13",
 
 		Noti = {
