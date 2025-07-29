@@ -2,7 +2,7 @@ getgenv().ConfigsKaitun = {
 	["Block Pet Gift"] = true,
 
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = true,
+	["Auto Rejoin"] = false,
 
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
