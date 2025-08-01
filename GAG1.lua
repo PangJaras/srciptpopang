@@ -1,6 +1,8 @@
 getgenv().ConfigsKaitun = {
 	["Block Pet Gift"] = true,
 
+	Collect_Cooldown = 30, -- cooldown to collect fruit
+
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = false,
 
@@ -95,9 +97,14 @@ getgenv().ConfigsKaitun = {
 				Minimum_Chi = 30
 			},
 			["Doing"] = {
-				Minimum_Money = 10, -- minimum money to start play this event
-				First_Upgrade_Tree = 1,
-				Maximum_Chi = 50,
+				Minimum_Money = 100, -- minimum money to start play this event
+				First_Upgrade_Tree = 4,
+				Maximum_Chi = 1,
+
+				-- // thing to skip doing
+				Skip_Fox = false, -- Skip The Middle Fox Trade (Corrupted Kitsune)
+				Skip_Corrupted_OldMan = false, -- Skip The OldMan Trade (Kodama)
+				-- If u need to skip Tranquill OldMan Set "First Upgrade Tree" To 0 and Max Chi To 99999
 			}
 		},
 		["Traveling Shop"] = {
