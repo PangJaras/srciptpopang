@@ -138,8 +138,17 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
+			"Gourmet Egg",
 			"Zen Egg",
-			"Common Summer Egg",
+			"Primal Egg",
+			"Dinosaur Egg",
+			"Oasis Egg",
+			"Anti Bee Egg",
+			"Night Egg",
+			"Bug Egg",
+			"Paradise Egg",
+			"Bee Egg",
+			"Rare Summer Egg",
 		},
 		Buy = {
 			"Bee Egg",
@@ -158,17 +167,18 @@ getgenv().ConfigsKaitun = {
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				["Starfish"] = { 5, 100, 1 },
+				["Starfish"] = { 6, 100, 1 },
 			},
 			["Limit Upgrade"] = 3,
 			["Equip When Done"] = { 
-				["Starfish"] = { 1, 70 },
-				["Tanchozuru"] = { 5, 70 },
+				["Starfish"] = { 6, 70 },
 			},
 		},
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"Corrupted Kitsune",
+			"French Fry Ferret",
+		 	"Mochi Mouse",
 			"Raiju",
 			"Koi",
 			"Tanuki",
@@ -221,6 +231,8 @@ getgenv().ConfigsKaitun = {
 			},
 			Pets = {
 				"T-Rex",
+				"French Fry Ferret",
+				"Mochi Mouse",
 				"Corrupted Kitsune",
 				"Raiju",
 				"Kitsune",
