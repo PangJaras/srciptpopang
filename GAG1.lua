@@ -2,7 +2,7 @@ getgenv().ConfigsKaitun = {
 	["Block Pet Gift"] = true,
 
 	Collect_Cooldown = 60, -- cooldown to collect fruit
-	JustFuckingCollectAll = false, -- Collect all (fruit not wait mutation)
+	JustFuckingCollectAll = true, -- Collect all (fruit not wait mutation)
 
 	["Low Cpu"] = false,
 	["Auto Rejoin"] = false,
@@ -83,16 +83,16 @@ getgenv().ConfigsKaitun = {
 
 	Events = {
 		["Cook Event"] = {
-			Minimum_Money = 30_000_000, -- minimum money to start play this event
+			Minimum_Money = 30, -- minimum money to start play this event
 		},
 		["Zen Event"] = {
 			["Restocking"] = { -- Minimumthing to restock
-				Max_Restocks_Price = 50_000_000,
-				Minimum_Money = 10_000_000,
+				Max_Restocks_Price = 5_000_000,
+				Minimum_Money = 1_000,
 				Minimum_Chi = 200
 			},
 			["Doing"] = {
-				Minimum_Money = 30_000_000, -- minimum money to start play this event
+				Minimum_Money = 30, -- minimum money to start play this event
 				First_Upgrade_Tree = 4,
 				Maximum_Chi = 250,
 
