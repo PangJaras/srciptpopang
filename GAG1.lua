@@ -59,18 +59,24 @@ getgenv().ConfigsKaitun = {
 			Mode = "Select", -- Select , Lock
 			Select = {
 				"Carrot",
+				"Mango",
+				"Coconut",
+				"Beanstalk",
+				"Watermelon",
+				"Banana",
+				"Ember Lily",
 				"Tomato",
 				"Blueberry",
 				"Corn",
 				"Bamboo",
-				"Starwberry",
+				"Strawberry",
 				"Apple",
 				"Pumpkin",
 				"OrangeTulip",
 				"Pepper",
 				"Cactus",
-				"Watermelon",
 				"Mushroom",
+				"Elder Strawberry",
 				"GiantPinecone"
 			},
 			Lock = {
