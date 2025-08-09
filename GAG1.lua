@@ -1,8 +1,12 @@
 getgenv().ConfigsKaitun = {
+	Beta_Fix_Data_Sync = true,
+
+	NoDeletePlayer = false,
+
 	["Block Pet Gift"] = true,
 
 	Collect_Cooldown = 60, -- cooldown to collect fruit
-	JustFuckingCollectAll = true, -- Collect all (fruit not wait mutation)
+	JustFuckingCollectAll = false, -- Collect all (fruit not wait mutation)
 
 	["Low Cpu"] = false,
 	["Auto Rejoin"] = false,
@@ -104,23 +108,6 @@ getgenv().ConfigsKaitun = {
 		["Cook Event"] = {
 			Minimum_Money = 30, -- minimum money to start play this event
 		},
-		["Zen Event"] = {
-			["Restocking"] = { -- Minimumthing to restock
-				Max_Restocks_Price = 5_000_000,
-				Minimum_Money = 1_000,
-				Minimum_Chi = 200
-			},
-			["Doing"] = {
-				Minimum_Money = 30, -- minimum money to start play this event
-				First_Upgrade_Tree = 4,
-				Maximum_Chi = 250,
-
-				-- // thing to skip doing
-				Skip_Fox = false, -- Skip The Middle Fox Trade (Corrupted Kitsune)
-				Skip_Corrupted_OldMan = false, -- Skip The OldMan Trade (Kodama)
-				-- If u need to skip Tranquill OldMan Set "First Upgrade Tree" To 0 and Max Chi To 99999
-			}
-		},
 		["Traveling Shop"] = {
 			"Bee Egg",
 		},
@@ -131,8 +118,13 @@ getgenv().ConfigsKaitun = {
 		},
 		Shop = {
 			"Zen Egg",
-			"Zenflare",
 			"Zen Seed Pack",
+			"Spiked Mango",
+			"Pet Shard Tranquil",
+			"Pet Shard Corrupted",
+			"Koi",
+			"Soft Sunshine",
+			"Sakura Bush",
 			"Raiju",
 		},
 		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
