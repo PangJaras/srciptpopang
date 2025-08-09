@@ -185,6 +185,7 @@ getgenv().ConfigsKaitun = {
 				["Starfish"] = { 6, 70 },
 			},
 		},
+		Favorite_LockedPet = true,
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"Corrupted Kitsune",
@@ -223,7 +224,7 @@ getgenv().ConfigsKaitun = {
 	},
 
 	Webhook = {
-		UrlPet = "https://discord.com/api/webhooks/1399275807074942986/Y8pLYZ6617b1SvXR3PAjqEqPio6zhAGvZFUML2MGGW6glcAGcTbtFfMbIWGaHAtDQipI",
+		UrlPet = "https://discordapp.com/api/webhooks/1402044210453942373/o0dhy_urYPxkPGlcorQt9HK2nr0Hxb_Eq_oAwC0IZ78kN8od6MBd8krVHE-V3ZUimGFm",
 		UrlSeed = "xxx",
 		PcName = "PC-ALL 2-13",
 
