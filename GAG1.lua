@@ -199,6 +199,7 @@ getgenv().ConfigsKaitun = {
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"French Fry Ferret",
+			"Lobster Thermidor",
 			"Spaghetti Sloth",
 			"Corrupted Kitsune",
 			"Raiju",
