@@ -138,6 +138,7 @@ getgenv().ConfigsKaitun = {
 	Gear = {
 		Buy = { 
 			"Master Sprinkler",
+			"Grandmaster Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
 			"Basic Sprinkler",
@@ -185,9 +186,10 @@ getgenv().ConfigsKaitun = {
 			["Pet"] = {
 				["Starfish"] = { 5, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
-			["Limit Upgrade"] = 3, -- max is 5 (more than or lower than 1 will do nothing)
+			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
 				["Blood Kiwi"] = { 8, 100 },
+				["Seal"] = { 8, 100 },
 				["Rooster"] = { 8, 100 },
 				["Starfish"] = { 6, 75 },
 			},
@@ -201,9 +203,7 @@ getgenv().ConfigsKaitun = {
 			"Corrupted Kitsune",
 			"Raiju",
 			"Koi",
-			"Tanuki",
 			"Tanchozuru",
-			"Kappa",
 			"Kitsune",
 			"Dilophosaurus",
 			"Moon Cat",
