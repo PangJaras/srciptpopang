@@ -104,33 +104,24 @@ getgenv().ConfigsKaitun = {
 	},
 
 	Events = {
-		["Cook Event"] = {
+		["Bean Event"] = {
 			Minimum_Money = 1_000_000, -- minimum money to start play this event
-			Rewards_Item = { -- The top is the most top mean prefered.
-				"Gorilla Chef",
-				"Gourmet Egg",
-				"Culinarian Chest",
-				"Gourmet Seed Pack",
-				"Sunny-Side Chicken",
-				-- u can add it more as u want, if it not in list.
-			}
+		},
+		MaxMoney_Restocks = 10_000_000,
+		Shop = { -- un comment to buy
+			"Sprout Seed Pack",
+			"Sprout Egg",
+			-- "Mandrake",
+			"Silver Fertilizer",
+			-- "Canary Melon",
+			-- "Amberheart",
+			["Spriggan"] = 8,
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
 		},
 		Craft = {
 			"Anti Bee Egg",
-		},
-		Shop = {
-			"Zen Egg",
-			"Zen Seed Pack",
-			"Spiked Mango",
-			"Pet Shard Tranquil",
-			"Pet Shard Corrupted",
-			"Koi",
-			"Soft Sunshine",
-			"Sakura Bush",
-			"Raiju",
 		},
 		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
@@ -155,6 +146,7 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
+			"Sprout Egg",
 			"Gourmet Egg",
 			"Zen Egg",
 			"Primal Egg",
@@ -194,16 +186,17 @@ getgenv().ConfigsKaitun = {
 				["Starfish"] = { 6, 75 },
 			},
 		},
-		Favorite_LockedPet = true,
+		Unfavorite_AllPet = false,
+		Favorite_LockedPet = false,
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
+			"Golden Goose",
+			"Golem",
 			"French Fry Ferret",
-			"Lobster Thermidor",
 			"Spaghetti Sloth",
 			"Corrupted Kitsune",
 			"Raiju",
 			"Koi",
-			"Tanchozuru",
 			"Kitsune",
 			"Dilophosaurus",
 			"Moon Cat",
@@ -223,9 +216,11 @@ getgenv().ConfigsKaitun = {
 			"Blood Owl",
 			["Starfish"] = 10,
 		},
-		LockPet_Weight = 5, -- if Weight >= 10 they will locked,
-		Instant_Sell = {		
-			"Shiba Inu",
+		LockPet_Weight = 6, -- if Weight >= 10 they will locked
+		Ignore_Pet_Weight = {
+			"NAME oF PET THAT U DONT NEED LOCK",
+		},
+		Instant_Sell = {
 			"Dog",
 		}
 	},
@@ -249,6 +244,7 @@ getgenv().ConfigsKaitun = {
 				"Idk"
 			},
 			Pets = {
+				"Golden Goose",
 				"T-Rex",
 				"French Fry Ferret",
 				"Corrupted Kitsune",
