@@ -1,14 +1,30 @@
-getgenv().Configuration = {
-    Enabled = true,
-    RedeemCode = true,
-    SummonLegendary = true,
-    EquipBest = true,
-    AutoClaims = {
-        ['Achievement'] = true,
-        ['Milestones'] = true, -- // รับเควสเลเวล
-        ['Battlepas'] = true,
-        ['Quests'] = true,
+_G.VanguardSettings = {
+    ['ClaimDaily'] = true,
+    ['ClaimQuests'] = true,
+    ['ClaimAchievement'] = true,
+    ['ClaimBattlepass'] = true,
+    ['ClaimMileStones'] = true,
+    ['RedeemCodes'] = true,
+    ['JoinGames'] = true,
+    ['Summon'] = {
+        ['LockUnits'] = false,
+        ['Name'] = {''}
     },
-};
-getgenv().key = {89956,76677,64607,15549,76535,154564}
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Xenon-Trash/Loader/main/Loader.lua'))()
+    ['Webhooks'] = {
+        ['Enabled'] = true,
+        ['Url'] = ''
+    },
+    ["TeaFarm"] = {
+        ["Enabled"] = true,
+        ["FarmAtLevel"] = 11,
+        ["RandomUnits"] = {
+            ["SellUnitsNotLock"] = true,
+            ["RandomWhenHaveTea"] = 100000,
+            ["Lock"] = {
+                "Iscanur (Pride)"
+            }
+        }
+    }
+}
+script_key="bGCPoPFZcBXGHteqqvSuRnqNKgqSWWwu";
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6756a57cd51293c409a1f7627cba5572.lua"))()
