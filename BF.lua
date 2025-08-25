@@ -107,7 +107,7 @@ _G.GunSettings = { -- ปืนที่จะทำ
 _G.Hop_Settings = {
     ["Find Tushita"] = false
 }
-getgenv().Key = "MARU-QBHF3-KB5W-C1S9P-8F5H-D3III"
-getgenv().id = "1173260639108599868"
+getgenv().Key = "MARU-744X-RAKPR-CZ94-VQV83-Y506"
+getgenv().id = "1176361730838892659"
 getgenv().Script_Mode = "Kaitun_Script"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"))()
