@@ -27,7 +27,7 @@ _G.MainSettings = {
         }
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
-    ['Main_Fruits'] = {'Dragon-Dragon'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
+    ['Main_Fruits'] = {'Kitsune-Kitsune', 'T-Rex-T-Rex', 'Gas-Gas', 'Yeti-Yeti', 'Gravity-Gravity'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
     ['Select_Fruits'] = {"Ice-Ice", "Light-Light", "Dark-Dark", "Creation-Creation", "Magma-Magma"} -- กินหรือซื้อตอนไม่มีผล
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
@@ -47,7 +47,7 @@ _G.Races_Settings = { -- ตั้งค่าเผ่า
         ["Races_Lock"] = {
             ["Races"] = { -- Select Races U want
                 ["Mink"] = true,
-                ["Human"] = false,
+                ["Human"] = true,
                 ["Fishman"] = true
             },
             ["RerollsWhenFragments"] = 20000 -- Random Races When Your Fragments is >= Settings
