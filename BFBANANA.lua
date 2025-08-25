@@ -1,7 +1,7 @@
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
-getgenv().Key = "a0cd575e213ea442da0daea7"
+getgenv().Key = "1c8a27157218814c741c7f7f"
     getgenv().SettingFarm ={
-        ["Hide UI"] = true,
+        ["Hide UI"] = false,
         ["Reset Teleport"] = {
             ["Enabled"] = false,
             ["Delay Reset"] = 3,
@@ -18,8 +18,8 @@ getgenv().Key = "a0cd575e213ea442da0daea7"
         },
         ["White Screen"] = false,
         ["Lock Fps"] = {
-            ["Enabled"] = true,
-            ["FPS"] = 12,
+            ["Enabled"] = false,
+            ["FPS"] = 20,
         },
         ["Get Items"] = {
             ["Saber"] = true,
@@ -29,14 +29,21 @@ getgenv().Key = "a0cd575e213ea442da0daea7"
             ["Cursed Dual Katana"] = false,
             ["Upgrade Race V2-V3"] = true,
             ["Auto Pull Lever"] = true,
+            ["Shark Anchor"] = true, --- if have cdk,sg,godhuman
+        },
+        ["Get Rare Items"] = {
+            ["Rengoku"] = false,
+            ["Dragon Trident"] = false, 
+            ["Pole (1st Form)"] = false,
+            ["Gravity Blade"]  = false,
         },
         ["Farm Fragments"] = {
-            ["Enabled"]  = false,
-            ["Fragment"] = 50000,
+            ["Enabled"]  = true,
+            ["Fragment"] = 300000,
         },
         ["Auto Chat"] = {
-            ["Enabled"] = true,
-            ["Text"] = "hey bro5555",
+            ["Enabled"] = false,
+            ["Text"] = "",
         },
         ["Auto Summon Rip Indra"] = true, --- auto buy haki and craft haki legendary 
         ["Select Hop"] = { -- 70% will have it
@@ -50,8 +57,8 @@ getgenv().Key = "a0cd575e213ea442da0daea7"
             ["Hop Find Mirage [ Pull Lever ]"] = false,
         },
         ["Farm Mastery"] = {
-            ["Melee"] = false,
-            ["Sword"] = false,
+            ["Melee"] = true,
+            ["Sword"] = true,
         },
         ["Buy Haki"] = {
             ["Enhancement"] = false,
@@ -61,7 +68,7 @@ getgenv().Key = "a0cd575e213ea442da0daea7"
         },
         ["Sniper Fruit Shop"] = {
             ["Enabled"] = true, -- Auto Buy Fruit in Shop Mirage and Normal
-            ["Fruit"] = {"Kitsune-Kitsune","Dragon-Dragon","Yeti-Yeti","Gas-Gas"},
+            ["Fruit"] = {"Leopard-Leopard","Kitsune-Kitsune","Dragon-Dragon","Yeti-Yeti","Gas-Gas"},
         },
         ["Lock Fruit"] = {},
         ["Webhook"] = {
