@@ -19,7 +19,7 @@ _G.VanguardSettings = {
         ["FarmAtLevel"] = 11,
         ["RandomUnits"] = {
             ["SellUnitsNotLock"] = true,
-            ["RandomWhenHaveTea"] = 100000,
+            ["RandomWhenHaveTea"] = 10000000,
             ["Lock"] = {
                 "Iscanur (Pride)"
             }
