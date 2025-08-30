@@ -30,7 +30,7 @@ _G.MainSettings = {
         }
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
-    ['Main_Fruits'] = {'Kitsune-Kitsune', 'T-Rex-T-Rex', 'Gas-Gas', 'Yeti-Yeti', 'Gravity-Gravity'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
+    ['Main_Fruits'] = {'Lightning-Lightning', 'T-Rex-T-Rex', 'Gas-Gas', 'Yeti-Yeti', 'Gravity-Gravity'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
     ['Select_Fruits'] = {"Ice-Ice", "Light-Light", "Dark-Dark", "Creation-Creation", "Magma-Magma"} -- กินหรือซื้อตอนไม่มีผล
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
