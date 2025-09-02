@@ -105,7 +105,7 @@ _G.SharkAnchor_Settings = {
 _G.GunSettings = { -- ปืนที่จะทำ
     ['Kabucha'] = true,
     ['SerpentBow'] = true,
-    ['SoulGuitar'] = true
+    ['SoulGuitar'] = false
 }
 _G.Hop_Settings = {
     ["Find Tushita"] = false
