@@ -26,11 +26,12 @@ _G.MainSettings = {
             [9] = "Mammoth-Mammoth",
             [10] = "Creation-Creation",
             [11] = "Lightning-Lightning",
-            [12] = "Portal-Portal"
+            [12] = "Portal-Portal",
+            [13] = "Pain-Pain"
         }
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
-    ['Main_Fruits'] = {'Lightning-Lightning', 'T-Rex-T-Rex', 'Gas-Gas', 'Yeti-Yeti', 'Gravity-Gravity'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
+    ['Main_Fruits'] = {'Lightning-Lightning', 'Mammoth-Mammoth', 'Leopard-Leopard', 'Pain-Pain', 'T-Rex-T-Rex', 'Gas-Gas', 'Yeti-Yeti', 'Gravity-Gravity'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
     ['Select_Fruits'] = {"Ice-Ice", "Light-Light", "Dark-Dark", "Creation-Creation", "Magma-Magma"} -- กินหรือซื้อตอนไม่มีผล
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
