@@ -17,7 +17,7 @@ end
 -- TweenService เดินไปตำแหน่ง
 local function tweenTo(targetPos)
     local distance = (hrp.Position - targetPos).Magnitude
-    local speed = 16
+    local speed = 200
     local time = distance / speed
 
     local tweenInfo = TweenInfo.new(time, Enum.EasingStyle.Linear)
