@@ -16,7 +16,7 @@ end
 -- ฟังก์ชัน Tween เดินไปหาเป้าหมาย
 local function tweenTo(targetPos)
     local distance = (hrp.Position - targetPos).Magnitude
-    local speed = 16 -- ความเร็ว (studs/วินาที) ปรับได้ตามต้องการ
+    local speed = 150 -- ความเร็ว (studs/วินาที) ปรับได้ตามต้องการ
     local time = distance / speed
 
     local tweenInfo = TweenInfo.new(time, Enum.EasingStyle.Linear)
