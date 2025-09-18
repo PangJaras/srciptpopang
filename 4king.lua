@@ -1,5 +1,3 @@
--- LocalScript (StarterPlayerScripts)
-
 local TweenService = game:GetService("TweenService")
 local player = game.Players.LocalPlayer
 local char = player.Character or player.CharacterAdded:Wait()
@@ -17,7 +15,7 @@ end
 -- TweenService เดินไปตำแหน่ง
 local function tweenTo(targetPos)
     local distance = (hrp.Position - targetPos).Magnitude
-    local speed = 150
+    local speed = 200
     local time = distance / speed
 
     local tweenInfo = TweenInfo.new(time, Enum.EasingStyle.Linear)
@@ -43,14 +41,14 @@ local function moveToCollect(prompt, useTween)
     end
 
     -- รอสุ่มเวลา
-    task.wait(randomWait(1))
+    task.wait(randomWait(1,2))
 
     -- เช็กระยะแล้วเก็บ
     if (hrp.Position - target.Position).Magnitude <= prompt.MaxActivationDistance then
         pcall(function()
             fireproximityprompt(prompt, 1)
         end)
-        task.wait(randomWait(1)) -- เว้นเวลาก่อนเก็บต่อ
+        task.wait(randomWait(1,2)) -- เว้นเวลาก่อนเก็บต่อ
     end
 end
 
