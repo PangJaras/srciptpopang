@@ -43,14 +43,14 @@ local function moveToCollect(prompt, useTween)
     end
 
     -- รอสุ่มเวลา
-    task.wait(randomWait(1,3))
+    task.wait(randomWait(1))
 
     -- เช็กระยะแล้วเก็บ
     if (hrp.Position - target.Position).Magnitude <= prompt.MaxActivationDistance then
         pcall(function()
             fireproximityprompt(prompt, 1)
         end)
-        task.wait(randomWait(2,5)) -- เว้นเวลาก่อนเก็บต่อ
+        task.wait(randomWait(1)) -- เว้นเวลาก่อนเก็บต่อ
     end
 end
 
