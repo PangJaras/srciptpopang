@@ -24,15 +24,12 @@ _G.MainSettings = {
             [7] = "Yeti-Yeti",
             [8] = "Gravity-Gravity",
             [9] = "Mammoth-Mammoth",
-            [10] = "Creation-Creation",
-            [11] = "Lightning-Lightning",
-            [12] = "Portal-Portal",
-            [13] = "Pain-Pain"
+            [10] = "Lightning-Lightning",
         }
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
-    ['Main_Fruits'] = {'Lightning-Lightning', 'Mammoth-Mammoth', 'Leopard-Leopard', 'Pain-Pain', 'T-Rex-T-Rex', 'Gas-Gas', 'Yeti-Yeti', 'Gravity-Gravity'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
-    ['Select_Fruits'] = {"Ice-Ice", "Light-Light", "Dark-Dark", "Creation-Creation", "Magma-Magma"} -- กินหรือซื้อตอนไม่มีผล
+    ['Main_Fruits'] = {'Ice-Ice', 'Light-Light', 'Magma-Magma'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
+    ['Select_Fruits'] = {"Ice-Ice", "Light-Light", "Dark-Dark", "Magma-Magma"} -- กินหรือซื้อตอนไม่มีผล
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
     ['Rainbow_Haki'] = true,
@@ -87,16 +84,16 @@ _G.SwordSettings = { -- ดาบที่จะทำ
     ['Saber'] = true,
     ["Pole"] = true,
     ['MidnightBlade'] = true,
-    ['Shisui'] = false,
-    ['Saddi'] = false,
-    ['Wando'] = false,
+    ['Shisui'] = true,
+    ['Saddi'] = true,
+    ['Wando'] = true,
     ['Yama'] = true,
     ['Rengoku'] = true,
     ['Canvander'] = true,
     ['BuddySword'] = true,
     ['TwinHooks'] = true,
-    ['HallowScryte'] = false,
-    ['TrueTripleKatana'] = false,
+    ['HallowScryte'] = true,
+    ['TrueTripleKatana'] = true,
     ['CursedDualKatana'] = true
 }
 _G.SharkAnchor_Settings = {
@@ -111,7 +108,7 @@ _G.GunSettings = { -- ปืนที่จะทำ
 _G.Hop_Settings = {
     ["Find Tushita"] = false
 }
-getgenv().Key = "MARU-CZ10-AY3EM-H0KU-6RTU5-4JBT"
-getgenv().id = "1125433071303397377"
+getgenv().Key = "MARU-744X-RAKPR-CZ94-VQV83-Y506"
+getgenv().id = "1176361730838892659"
 getgenv().Script_Mode = "Kaitun_Script"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"))()
