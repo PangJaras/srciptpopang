@@ -24,7 +24,7 @@ _G.MainSettings = {
             [7] = "Yeti-Yeti",
             [8] = "Gravity-Gravity",
             [9] = "Mammoth-Mammoth",
-            [10] = "Lightning-Lightning",
+            [10] = "Lightning-Lightning"
         }
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
