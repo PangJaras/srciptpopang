@@ -47,7 +47,7 @@ getgenv().Key = "b850595b549f1a49683179b5"
         },
         ["Auto Summon Rip Indra"] = true, --- auto buy haki and craft haki legendary 
         ["Select Hop"] = { -- 70% will have it
-            ["Hop Server If Have Player Near"] = true, 
+            ["Hop Server If Have Player Near"] = false, 
             ["Hop Find Rip Indra Get Valkyrie Helm or Get Tushita"] = true, 
             ["Hop Find Dough King Get Mirror Fractal"] = true,
             ["Hop Find Raids Castle [CDK]"] = false,
