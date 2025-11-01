@@ -28,7 +28,7 @@ _G.MainSettings = {
         }
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
-    ['Main_Fruits'] = {'Ice-Ice', 'Light-Light', 'Magma-Magma'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
+    ['Main_Fruits'] = {'Ice-Ice', 'Light-Light', 'Buddha-Buddha', 'Magma-Magma'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
     ['Select_Fruits'] = {"Ice-Ice", "Light-Light", "Dark-Dark", "Magma-Magma"} -- กินหรือซื้อตอนไม่มีผล
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
