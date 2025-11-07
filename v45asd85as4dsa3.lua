@@ -1,5 +1,5 @@
 if not _G.Name1 or not _G.scriptlua1 then
-    warn("⚠️ กรุณาตั้งค่า _G.Name1 ถึง _G.Name5 และ _G.scriptlua1 ก่อนรันสคริปต์นี้")
+    warn("Config not foud")
     return
 end
 
