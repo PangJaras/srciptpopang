@@ -1,8 +1,7 @@
 repeat wait() until game:IsLoaded()
 
--- CONFIG
 if not _G.Name1 or not _G.scriptlua1 then
-    warn("❌ Config not found!")
+    warn("Config not found!")
     return
 end
 
@@ -13,7 +12,6 @@ local groupTables = { _G.Name1, _G.Name2, _G.Name3 or {}, _G.Name4 or {}, _G.Nam
 local groupScripts = _G.scriptlua1
 local groupNames = { "1", "2", "3", "4", "5" }
 
--- หา Helper ของแต่ละกลุ่ม
 local function findGroupByHelper()
     local players = game.Players:GetPlayers()
     for i, group in ipairs(groupTables) do
@@ -30,47 +28,45 @@ local function findGroupByHelper()
     return nil
 end
 
--- สร้าง UI Notification (ถ้ายังไม่มี ให้สร้างใหม่)
-local function showNotification(msg)
-    local gui = player:WaitForChild("PlayerGui")
-    local existing = gui:FindFirstChild("NotificationUI")
-    
-    local frame, text
-    if existing then
-        frame = existing:FindFirstChild("Frame")
-        text = frame and frame:FindFirstChild("TextLabel")
-        if text then text.Text = msg end
-    else
-        local gui = Instance.new("ScreenGui")
-        gui.Name = "NotificationUI"
-        gui.Parent = player:WaitForChild("PlayerGui")
-        
-        frame = Instance.new("Frame")
-        frame.Name = "Frame"
-        frame.Size = UDim2.new(0, 250, 0, 50)
-        frame.Position = UDim2.new(1, -260, 1, -60)
-        frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-        frame.BackgroundTransparency = 0.2
-        frame.BorderSizePixel = 0
-        frame.Parent = gui
-        
-        local corner = Instance.new("UICorner")
-        corner.CornerRadius = UDim.new(0, 8)
-        corner.Parent = frame
 
-        text = Instance.new("TextLabel")
-        text.Name = "TextLabel"
-        text.Size = UDim2.new(1, 0, 1, 0)
-        text.BackgroundTransparency = 1
-        text.TextColor3 = Color3.fromRGB(255, 255, 255)
-        text.Font = Enum.Font.GothamBold
-        text.TextSize = 16
-        text.Text = msg
-        text.Parent = frame
-    end
+local function showNotification(msg, duration)
+    local gui = Instance.new("ScreenGui")
+    gui.Name = "NotificationUI"
+    gui.Parent = player:WaitForChild("PlayerGui")
+    
+    local frame = Instance.new("Frame")
+    frame.Size = UDim2.new(0, 250, 0, 50)
+    frame.Position = UDim2.new(1, 0, 1, 0)
+    frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    frame.BackgroundTransparency = 0.2
+    frame.BorderSizePixel = 0
+    frame.Parent = gui
+    
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 8)
+    corner.Parent = frame
+
+    local text = Instance.new("TextLabel")
+    text.Size = UDim2.new(1, 0, 1, 0)
+    text.BackgroundTransparency = 1
+    text.TextColor3 = Color3.fromRGB(255, 255, 255)
+    text.Font = Enum.Font.GothamBold
+    text.TextSize = 16
+    text.Text = msg
+    text.Parent = frame
+
+    frame:TweenPosition(UDim2.new(1, -260, 1, -60), "Out", "Quad", 0.3, true)
+
+    task.delay(duration or 3, function()
+        if frame then
+            frame:TweenPosition(UDim2.new(1, 0, 1, 0), "In", "Quad", 0.3, true)
+            task.delay(0.3, function()
+                if gui then gui:Destroy() end
+            end)
+        end
+    end)
 end
 
--- สร้าง UI แสดงกลุ่ม (เหมือนเดิม)
 local function createGroupUI(groupName, groupNum)
     local gui = player:WaitForChild("PlayerGui")
     local oldUI = gui:FindFirstChild("GroupDisplayUI")
@@ -127,7 +123,6 @@ local function createGroupUI(groupName, groupNum)
     nameLabel.TextSize = 18
     nameLabel.Parent = mainFrame
 
-    -- เอฟเฟกต์สีรุ้ง
     task.spawn(function()
         local hue = 0
         while screenGui.Parent do
@@ -140,21 +135,24 @@ local function createGroupUI(groupName, groupNum)
     end)
 end
 
--- รอ Helper แล้วรันสคริปต์
-task.spawn(function()
-    local groupNum = nil
-    repeat
-        showNotification("กำลังรอตัว Helper เข้าร่วม...")
-        groupNum = findGroupByHelper()
-        task.wait(1)
-    until groupNum
+local function isHelper()
+    for i, group in ipairs(groupTables) do
+        if #group >= 2 then
+            if string.lower(playerName) == string.lower(group[1]) or string.lower(playerName) == string.lower(group[2]) then
+                return true, i
+            end
+        end
+    end
+    return false, nil
+end
 
-    local groupName = groupNames[groupNum]
-    local link = groupScripts[groupNum]
+local helperFlag, helperGroup = isHelper()
 
-    showNotification("พบ Helper ของกลุ่ม " .. groupName .. " กำลังโหลดสคริปต์...")
-    createGroupUI(groupName, groupNum)
+if helperFlag then
+    showNotification("IM Helper!", 3)
+    createGroupUI(groupNames[helperGroup], helperGroup)
 
+    local link = groupScripts[helperGroup]
     if link and link ~= "" then
         local success, err = pcall(function()
             loadstring(game:HttpGet(link))()
@@ -163,9 +161,26 @@ task.spawn(function()
             warn("❌ โหลดสคริปต์ล้มเหลว: " .. tostring(err))
         end
     end
-
-    -- หลังรันเสร็จ ลบ notification
-    local gui = player:FindFirstChild("PlayerGui")
-    local notif = gui and gui:FindFirstChild("NotificationUI")
-    if notif then notif:Destroy() end
-end)
+else
+    task.spawn(function()
+        repeat
+            showNotification("Wait For Helper Join...", 3)
+            local groupNum = findGroupByHelper()
+            if groupNum then
+                showNotification("Helper Joined! Loading Script...", 3)
+                createGroupUI(groupNames[groupNum], groupNum)
+                local link = groupScripts[groupNum]
+                if link and link ~= "" then
+                    local success, err = pcall(function()
+                        loadstring(game:HttpGet(link))()
+                    end)
+                    if not success then
+                        warn("❌ โหลดสคริปต์ล้มเหลว: " .. tostring(err))
+                    end
+                end
+                break
+            end
+            task.wait(3)
+        until false
+    end)
+end
