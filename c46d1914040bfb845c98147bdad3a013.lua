@@ -1,12 +1,6 @@
 repeat wait() until game:IsLoaded()
 
--- CONFIG (ตั้งค่าจากไฟล์ config ภายนอก)
--- ตัวอย่างไฟล์ config: Config.lua
---[[
-_G.Name1 = { "ElizafVronE", "MartinLlEtbV", ... }
-_G.Name2 = { "JulianBwXEig", "AprilpheETu", ... }
-_G.scriptlua1 = { "https://pastebin.com/raw/fpcuzwvN", ... }
-]]
+-- CONFIG
 if not _G.Name1 or not _G.scriptlua1 then
     warn("❌ Config not found!")
     return
@@ -19,7 +13,7 @@ local groupTables = { _G.Name1, _G.Name2, _G.Name3 or {}, _G.Name4 or {}, _G.Nam
 local groupScripts = _G.scriptlua1
 local groupNames = { "1", "2", "3", "4", "5" }
 
--- ฟังก์ชันหา Helper ของแต่ละกลุ่ม
+-- หา Helper ของแต่ละกลุ่ม
 local function findGroupByHelper()
     local players = game.Players:GetPlayers()
     for i, group in ipairs(groupTables) do
@@ -36,39 +30,47 @@ local function findGroupByHelper()
     return nil
 end
 
--- ฟังก์ชันสร้าง notification UI
+-- สร้าง UI Notification (ถ้ายังไม่มี ให้สร้างใหม่)
 local function showNotification(msg)
-    local gui = Instance.new("ScreenGui")
-    gui.Name = "NotificationUI"
-    gui.Parent = player:WaitForChild("PlayerGui")
+    local gui = player:WaitForChild("PlayerGui")
+    local existing = gui:FindFirstChild("NotificationUI")
     
-    local frame = Instance.new("Frame")
-    frame.Size = UDim2.new(0, 250, 0, 50)
-    frame.Position = UDim2.new(1, -260, 1, -60) -- ขวาล่าง
-    frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-    frame.BackgroundTransparency = 0.2
-    frame.BorderSizePixel = 0
-    frame.Parent = gui
-    
-    local corner = Instance.new("UICorner")
-    corner.CornerRadius = UDim.new(0, 8)
-    corner.Parent = frame
+    local frame, text
+    if existing then
+        frame = existing:FindFirstChild("Frame")
+        text = frame and frame:FindFirstChild("TextLabel")
+        if text then text.Text = msg end
+    else
+        local gui = Instance.new("ScreenGui")
+        gui.Name = "NotificationUI"
+        gui.Parent = player:WaitForChild("PlayerGui")
+        
+        frame = Instance.new("Frame")
+        frame.Name = "Frame"
+        frame.Size = UDim2.new(0, 250, 0, 50)
+        frame.Position = UDim2.new(1, -260, 1, -60)
+        frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+        frame.BackgroundTransparency = 0.2
+        frame.BorderSizePixel = 0
+        frame.Parent = gui
+        
+        local corner = Instance.new("UICorner")
+        corner.CornerRadius = UDim.new(0, 8)
+        corner.Parent = frame
 
-    local text = Instance.new("TextLabel")
-    text.Size = UDim2.new(1, 0, 1, 0)
-    text.BackgroundTransparency = 1
-    text.TextColor3 = Color3.fromRGB(255, 255, 255)
-    text.Font = Enum.Font.GothamBold
-    text.TextSize = 16
-    text.Text = msg
-    text.Parent = frame
-
-    task.delay(3, function()
-        if gui then gui:Destroy() end
-    end)
+        text = Instance.new("TextLabel")
+        text.Name = "TextLabel"
+        text.Size = UDim2.new(1, 0, 1, 0)
+        text.BackgroundTransparency = 1
+        text.TextColor3 = Color3.fromRGB(255, 255, 255)
+        text.Font = Enum.Font.GothamBold
+        text.TextSize = 16
+        text.Text = msg
+        text.Parent = frame
+    end
 end
 
--- ฟังก์ชันสร้าง UI แสดงกลุ่ม (เหมือนเดิม)
+-- สร้าง UI แสดงกลุ่ม (เหมือนเดิม)
 local function createGroupUI(groupName, groupNum)
     local gui = player:WaitForChild("PlayerGui")
     local oldUI = gui:FindFirstChild("GroupDisplayUI")
@@ -140,9 +142,9 @@ end
 
 -- รอ Helper แล้วรันสคริปต์
 task.spawn(function()
-    showNotification("กำลังรอตัว Helper เข้าร่วม...")
     local groupNum = nil
     repeat
+        showNotification("กำลังรอตัว Helper เข้าร่วม...")
         groupNum = findGroupByHelper()
         task.wait(1)
     until groupNum
@@ -151,7 +153,6 @@ task.spawn(function()
     local link = groupScripts[groupNum]
 
     showNotification("พบ Helper ของกลุ่ม " .. groupName .. " กำลังโหลดสคริปต์...")
-
     createGroupUI(groupName, groupNum)
 
     if link and link ~= "" then
@@ -162,4 +163,9 @@ task.spawn(function()
             warn("❌ โหลดสคริปต์ล้มเหลว: " .. tostring(err))
         end
     end
+
+    -- หลังรันเสร็จ ลบ notification
+    local gui = player:FindFirstChild("PlayerGui")
+    local notif = gui and gui:FindFirstChild("NotificationUI")
+    if notif then notif:Destroy() end
 end)
