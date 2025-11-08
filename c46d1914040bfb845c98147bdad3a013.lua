@@ -14,7 +14,7 @@ local groupScripts = _G.scriptlua1
 local groupNames = { "1", "2", "3", "4", "5" }
 
 --------------------------------------------------------
--- Utility: normalize (lower-case และ trim)
+-- Utility: normalize (lower-case + trim)
 --------------------------------------------------------
 local function normalize(s)
     if not s then return "" end
@@ -24,7 +24,7 @@ local function normalize(s)
 end
 
 --------------------------------------------------------
--- คืนกลุ่มของ Helper เท่านั้น (2 ชื่อแรก)
+-- คืนกลุ่มของ Helper เท่านั้น (2 ชื่อแรกของแต่ละกลุ่ม)
 --------------------------------------------------------
 local function getHelperGroup(username)
     local uname = normalize(username)
@@ -192,34 +192,36 @@ end
 local isHelper = getHelperGroup(player.Name) ~= nil
 local groupName = groupNames[myGroup]
 
-print("คุณอยู่ในกลุ่ม", myGroup)
-createGroupUI(groupName, myGroup)
-
 --------------------------------------------------------
--- Helper → รันทันที
+-- Helper → แสดงกลุ่มทันที + รันทันที
 --------------------------------------------------------
 if isHelper then
-    print("คุณเป็น Helper → รันสคริปต์ทันที")
+    print("คุณเป็น Helper ของกลุ่ม", myGroup)
+    createGroupUI(groupName, myGroup)
     runGroupScript(myGroup)
     return
 end
 
 --------------------------------------------------------
--- Farmer → รอ Helper
+-- Farmer → ต้องรอ Helper ก่อนแสดง UI + รันสคริปต์
 --------------------------------------------------------
-print("คุณเป็น Farmer → รอ Helper ของกลุ่ม", myGroup)
+print("คุณเป็น Farmer → รอ Helper ก่อนจึงแสดงกลุ่มและรันสคริปต์")
 
 task.spawn(function()
     while true do
         for _, plr in ipairs(Players:GetPlayers()) do
             if getHelperGroup(plr.Name) == myGroup then
-                print("พบ Helper แล้ว → รันสคริปต์กลุ่ม", myGroup)
+                print("พบ Helper ของกลุ่ม", myGroup, "แล้ว → เริ่มทำงาน")
+
+                -- แสดง UI เมื่อเจอ Helper เท่านั้น
+                createGroupUI(groupName, myGroup)
+
+                -- รันสคริปต์ของกลุ่ม
                 runGroupScript(myGroup)
                 return
             end
         end
 
-        print("ยังไม่พบ Helper... รอ 3 วินาที")
         task.wait(3)
     end
 end)
