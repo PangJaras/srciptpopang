@@ -1,78 +1,83 @@
 repeat wait() until game:IsLoaded()
 
+-- CONFIG (ตั้งค่าจากไฟล์ config ภายนอก)
+-- ตัวอย่างไฟล์ config: Config.lua
+--[[
+_G.Name1 = { "ElizafVronE", "MartinLlEtbV", ... }
+_G.Name2 = { "JulianBwXEig", "AprilpheETu", ... }
+_G.scriptlua1 = { "https://pastebin.com/raw/fpcuzwvN", ... }
+]]
 if not _G.Name1 or not _G.scriptlua1 then
-    warn("Config not found")
+    warn("❌ Config not found!")
     return
 end
 
-local Players = game:GetService("Players")
-local player = Players.LocalPlayer
-local playerGui = player:WaitForChild("PlayerGui")
+local player = game.Players.LocalPlayer
+local playerName = player.Name
 
-local groupTables = { _G.Name1, _G.Name2, _G.Name3, _G.Name4, _G.Name5 }
+local groupTables = { _G.Name1, _G.Name2, _G.Name3 or {}, _G.Name4 or {}, _G.Name5 or {} }
 local groupScripts = _G.scriptlua1
 local groupNames = { "1", "2", "3", "4", "5" }
 
---------------------------------------------------------
--- Utility: normalize (lower-case + trim)
---------------------------------------------------------
-local function normalize(s)
-    if not s then return "" end
-    s = tostring(s)
-    s = s:match("^%s*(.-)%s*$")  -- trim
-    return string.lower(s)
-end
-
---------------------------------------------------------
--- คืนกลุ่มของ Helper เท่านั้น (2 ชื่อแรกของแต่ละกลุ่ม)
---------------------------------------------------------
-local function getHelperGroup(username)
-    local uname = normalize(username)
-
+-- ฟังก์ชันหา Helper ของแต่ละกลุ่ม
+local function findGroupByHelper()
+    local players = game.Players:GetPlayers()
     for i, group in ipairs(groupTables) do
-        if group then
-            for j = 1, 2 do
-                local name = group[j]
-                if name and normalize(name) == uname then
+        if #group >= 2 then
+            local helper1, helper2 = group[1], group[2]
+            for _, p in ipairs(players) do
+                local lowerName = string.lower(p.Name)
+                if lowerName == string.lower(helper1) or lowerName == string.lower(helper2) then
                     return i
                 end
             end
         end
     end
-
     return nil
 end
 
---------------------------------------------------------
--- คืนกลุ่มของผู้เล่น (รวม Helper + Farmer)
---------------------------------------------------------
-local function getAnyGroup(username)
-    local uname = normalize(username)
+-- ฟังก์ชันสร้าง notification UI
+local function showNotification(msg)
+    local gui = Instance.new("ScreenGui")
+    gui.Name = "NotificationUI"
+    gui.Parent = player:WaitForChild("PlayerGui")
+    
+    local frame = Instance.new("Frame")
+    frame.Size = UDim2.new(0, 250, 0, 50)
+    frame.Position = UDim2.new(1, -260, 1, -60) -- ขวาล่าง
+    frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    frame.BackgroundTransparency = 0.2
+    frame.BorderSizePixel = 0
+    frame.Parent = gui
+    
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 8)
+    corner.Parent = frame
 
-    for i, group in ipairs(groupTables) do
-        if group then
-            for _, name in ipairs(group) do
-                if normalize(name) == uname then
-                    return i
-                end
-            end
-        end
-    end
+    local text = Instance.new("TextLabel")
+    text.Size = UDim2.new(1, 0, 1, 0)
+    text.BackgroundTransparency = 1
+    text.TextColor3 = Color3.fromRGB(255, 255, 255)
+    text.Font = Enum.Font.GothamBold
+    text.TextSize = 16
+    text.Text = msg
+    text.Parent = frame
 
-    return nil
+    task.delay(3, function()
+        if gui then gui:Destroy() end
+    end)
 end
 
---------------------------------------------------------
--- UI แสดง Group
---------------------------------------------------------
+-- ฟังก์ชันสร้าง UI แสดงกลุ่ม (เหมือนเดิม)
 local function createGroupUI(groupName, groupNum)
-    local oldUI = playerGui:FindFirstChild("GroupDisplayUI")
+    local gui = player:WaitForChild("PlayerGui")
+    local oldUI = gui:FindFirstChild("GroupDisplayUI")
     if oldUI then oldUI:Destroy() end
 
     local screenGui = Instance.new("ScreenGui")
     screenGui.Name = "GroupDisplayUI"
     screenGui.ResetOnSpawn = false
-    screenGui.Parent = playerGui
+    screenGui.Parent = gui
 
     local mainFrame = Instance.new("Frame")
     mainFrame.Size = UDim2.new(0, 150, 0, 70)
@@ -120,6 +125,7 @@ local function createGroupUI(groupName, groupNum)
     nameLabel.TextSize = 18
     nameLabel.Parent = mainFrame
 
+    -- เอฟเฟกต์สีรุ้ง
     task.spawn(function()
         local hue = 0
         while screenGui.Parent do
@@ -132,96 +138,28 @@ local function createGroupUI(groupName, groupNum)
     end)
 end
 
---------------------------------------------------------
--- ฟังก์ชันรันสคริปต์ของกลุ่ม
---------------------------------------------------------
-local function runGroupScript(groupIndex)
-    local link = groupScripts[groupIndex]
+-- รอ Helper แล้วรันสคริปต์
+task.spawn(function()
+    showNotification("กำลังรอตัว Helper เข้าร่วม...")
+    local groupNum = nil
+    repeat
+        groupNum = findGroupByHelper()
+        task.wait(1)
+    until groupNum
+
+    local groupName = groupNames[groupNum]
+    local link = groupScripts[groupNum]
+
+    showNotification("พบ Helper ของกลุ่ม " .. groupName .. " กำลังโหลดสคริปต์...")
+
+    createGroupUI(groupName, groupNum)
 
     if link and link ~= "" then
-        print("กำลังโหลดสคริปต์จาก Group " .. groupIndex .. ": " .. link)
         local success, err = pcall(function()
             loadstring(game:HttpGet(link))()
         end)
-        if not success then warn("โหลดสคริปต์ล้มเหลว: " .. tostring(err)) end
-    else
-        warn("ไม่พบลิงก์สคริปต์สำหรับกลุ่มนี้")
-    end
-
-    -- Notification
-    local notification = Instance.new("ScreenGui")
-    notification.Name = "ExecutionNotification"
-    notification.Parent = playerGui
-
-    local frame = Instance.new("Frame")
-    frame.Size = UDim2.new(0, 250, 0, 50)
-    frame.Position = UDim2.new(0.5, -125, 0.8, 0)
-    frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-    frame.BackgroundTransparency = 0.2
-    frame.BorderSizePixel = 0
-    frame.Parent = notification
-
-    local uiCorner = Instance.new("UICorner")
-    uiCorner.CornerRadius = UDim.new(0, 8)
-    uiCorner.Parent = frame
-
-    local text = Instance.new("TextLabel")
-    text.Size = UDim2.new(1, 0, 1, 0)
-    text.Text = "สคริปต์สำหรับกลุ่ม " .. tostring(groupIndex) .. " เริ่มทำงานแล้ว!"
-    text.TextColor3 = Color3.fromRGB(255, 255, 255)
-    text.BackgroundTransparency = 1
-    text.Font = Enum.Font.GothamBold
-    text.TextSize = 16
-    text.Parent = frame
-
-    task.delay(3, function()
-        if notification then notification:Destroy() end
-    end)
-end
-
---------------------------------------------------------
--- เริ่มระบบ
---------------------------------------------------------
-local myGroup = getAnyGroup(player.Name)
-if not myGroup then
-    warn("ผู้เล่นไม่ได้อยู่ในรายชื่อกลุ่มใด")
-    pcall(function() player:Kick("คุณไม่ได้รับอนุญาตให้ใช้สคริปต์นี้") end)
-    return
-end
-
-local isHelper = getHelperGroup(player.Name) ~= nil
-local groupName = groupNames[myGroup]
-
---------------------------------------------------------
--- Helper → แสดงกลุ่มทันที + รันทันที
---------------------------------------------------------
-if isHelper then
-    print("คุณเป็น Helper ของกลุ่ม", myGroup)
-    createGroupUI(groupName, myGroup)
-    runGroupScript(myGroup)
-    return
-end
-
---------------------------------------------------------
--- Farmer → ต้องรอ Helper ก่อนแสดง UI + รันสคริปต์
---------------------------------------------------------
-print("คุณเป็น Farmer → รอ Helper ก่อนจึงแสดงกลุ่มและรันสคริปต์")
-
-task.spawn(function()
-    while true do
-        for _, plr in ipairs(Players:GetPlayers()) do
-            if getHelperGroup(plr.Name) == myGroup then
-                print("พบ Helper ของกลุ่ม", myGroup, "แล้ว → เริ่มทำงาน")
-
-                -- แสดง UI เมื่อเจอ Helper เท่านั้น
-                createGroupUI(groupName, myGroup)
-
-                -- รันสคริปต์ของกลุ่ม
-                runGroupScript(myGroup)
-                return
-            end
+        if not success then
+            warn("❌ โหลดสคริปต์ล้มเหลว: " .. tostring(err))
         end
-
-        task.wait(3)
     end
 end)
