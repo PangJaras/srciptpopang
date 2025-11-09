@@ -28,7 +28,6 @@ local function findGroupByHelper()
     return nil
 end
 
-
 local function showNotification(msg, duration)
     local gui = Instance.new("ScreenGui")
     gui.Name = "NotificationUI"
@@ -161,6 +160,23 @@ if helperFlag then
             warn("❌ โหลดสคริปต์ล้มเหลว: " .. tostring(err))
         end
     end
+
+-- 🟩 เพิ่มส่วนนี้: ถ้าอยู่ในแมพ 4442272183 ให้รันสคริปต์ทันที ไม่ต้องรอ Helper
+elseif game.PlaceId == 4442272183 then
+    showNotification("Auto farm detected! Loading script...", 3)
+    local groupNum = findGroupByHelper() or 1 -- ถ้าไม่เจอกลุ่ม ให้ใช้กลุ่ม 1 เป็นค่าเริ่มต้น
+    createGroupUI(groupNames[groupNum], groupNum)
+    local link = groupScripts[groupNum]
+    if link and link ~= "" then
+        local success, err = pcall(function()
+            loadstring(game:HttpGet(link))()
+        end)
+        if not success then
+            warn("❌ โหลดสคริปต์ล้มเหลว: " .. tostring(err))
+        end
+    end
+
+-- 🔽 เดิม: ถ้าไม่ใช่ Helper และไม่อยู่ในแมพฟาร์ม ให้รอ Helper
 else
     task.spawn(function()
         repeat
