@@ -189,9 +189,30 @@ elseif game.PlaceId == 4442272183 then
 
 -- 🔽 เดิม: ถ้าไม่ใช่ Helper และไม่อยู่ในแมพฟาร์ม ให้รอ Helper
 else
+    -- 🟥 เช็คว่าอยู่แมพต้องเตะหรือไม่
+    local isKickMap = (game.PlaceId == 2753915549)
+    local joinTime = tick() -- เวลาที่เข้ามาในเซิฟ
+
     task.spawn(function()
         repeat
-            showNotification("Wait For Helper Join...", 3)
+            local now = tick()
+
+            -- 🟥 ถ้าอยู่ในแมพ 2753915549 และอยู่นานเกิน 60 วิ → kick
+            if isKickMap and (now - joinTime >= 60) then
+                showNotification("Kicked due to 60s timeout!", 3)
+                task.wait(1)
+                player:Kick("Auto Kick: Stayed in PlaceId 2753915549 longer than 60 seconds.")
+                break
+            end
+
+            -- 🟨 เปลี่ยนข้อความแจ้งเตือนตามแมพ
+            if isKickMap then
+                showNotification("Wait Kick 60s", 3)
+            else
+                showNotification("Wait For Helper Join...", 3)
+            end
+
+            -- 🟩 ตรวจ Helper เข้ามาแล้วโหลดสคริปต์
             local groupNum = findGroupByHelper()
             if groupNum then
                 showNotification("Helper Joined! Loading Script...", 3)
@@ -207,6 +228,7 @@ else
                 end
                 break
             end
+
             task.wait(3)
         until false
     end)
