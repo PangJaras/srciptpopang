@@ -1,4 +1,16 @@
 repeat wait() until game:IsLoaded()
+task.spawn(function()
+    if game.PlaceId == 2753915549 then
+        local startTime = os.time()
+        while task.wait(1) do
+            if os.time() - startTime >= 60 then
+                game.Players.LocalPlayer:Kick("Word 1 Kick 60s")
+                break
+            end
+        end
+    end
+end)
+
 
 if not _G.Name1 or not _G.scriptlua1 then
     warn("Config not found!")
