@@ -1,13 +1,12 @@
 repeat wait() until game:IsLoaded()
 task.spawn(function()
     if game.PlaceId == 2753915549 then
-        local startTime = os.time()
-        while task.wait(1) do
-            if os.time() - startTime >= 60 then
-                game.Players.LocalPlayer:Kick("Word 1 Kick 60s")
-                break
-            end
+        local totalTime = 60
+        for i = totalTime, 1, -1 do
+            showNotification("Word 1 Kick in " .. i .. "s", 1)
+            task.wait(1)
         end
+        game.Players.LocalPlayer:Kick("Word 1 Kick 60s")
     end
 end)
 
